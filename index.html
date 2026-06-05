@@ -3,34 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galerija ArtS | Nataša Konjević – Umjetnost s Romanije</title>
-    <meta name="description" content="Službeni portfolio akademske slikarice i ilustratorice Nataše Konjević. Otkrijte bajkovite ilustracije, monumentalne murale i priču iz šumskog ateljea na Romaniji.">
+    <title>Galerija ArtS | Nataša Stević – Umjetnost s Romanije</title>
+    <meta name="description" content="Službeni portfolio akademske slikarice i ilustratorice Nataše Stević. Otkrijte bajkovite ilustracije, monumentalne murale i priču iz šumskog ateljea na Romaniji.">
     <meta name="author" content="Kezić Vizuali">
     
+    <!-- Open Graph / Facebook / Instagram dijeljenje linka -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://galerija-arts.github.io/">
-    <meta property="og:title" content="Galerija ArtS | Nataša Konjević">
+    <meta property="og:title" content="Galerija ArtS | Nataša Stević">
     <meta property="og:description" content="Umjetnost inspirirana prirodom, tišinom planine i djetetom u nama.">
     <meta property="og:image" content="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?q=80&w=1200&auto=format&fit=crop">
 
+    <!-- Google Fonts: Playfair Display za umjetničke naslove i Inter za tekst -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
+    <!-- FontAwesome za ikone -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
+    <!-- AOS (Animate On Scroll) CSS za vrhunske animacije ulijetanja -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
     <style>
         body { font-family: 'Inter', sans-serif; background-color: #FDFBF7; color: #2C2A29; }
         h1, h2, .font-serif-art { font-family: 'Playfair Display', serif; }
         
-        /* Prilagođene umjetničke klase za tople boje i paspartu efekte */
         .text-accent { color: #D4AF37; }
         .bg-accent-soft { background-color: #F4EFE6; }
         .border-accent-soft { border-color: rgba(212, 175, 55, 0.15); }
         
-        /* Paspartu okvir za slike kao u pravim galerijama */
         .gallery-frame {
             padding: 16px;
             background-color: #ffffff;
@@ -43,7 +46,6 @@
             box-shadow: 0 30px 60px rgba(44, 42, 41, 0.08);
         }
 
-        /* Navigacijski link efekti */
         .nav-link-effect {
             position: relative;
             transition: color 0.3s ease;
@@ -62,7 +64,6 @@
             width: 100%;
         }
 
-        /* Hero pozadina - gradijent u tople tonove finog papira */
         .hero-art-bg {
             background: linear-gradient(135deg, #FDFBF7 50%, #EFEBE4 100%);
         }
@@ -70,6 +71,7 @@
 </head>
 <body class="antialiased selection:bg-[#F4EFE6] selection:text-[#2C2A29]">
 
+    <!-- NAVBAR -->
     <nav class="fixed w-full z-50 bg-[#FDFBF7]/90 backdrop-blur-xl border-b border-stone-200/50 flex justify-between items-center py-5 px-6 md:px-16 transition-all duration-300">
         <a href="#pocetna" class="text-xl md:text-2xl font-semibold tracking-wide font-serif-art">
             Galerija <span class="text-[#D4AF37]">ArtS</span>
@@ -79,11 +81,12 @@
             <a href="#priča" class="nav-link-effect text-stone-600 hover:text-[#D4AF37]">Priča s Romanije</a>
             <a href="#galerija" class="nav-link-effect text-stone-600 hover:text-[#D4AF37]">Galerija Radova</a>
             <a href="#filozofija" class="nav-link-effect text-stone-600 hover:text-[#D4AF37]">Filozofija</a>
-            <a href="#kontakt" class="nav-link-effect text-stone-600 hover:text-[#D4AF37]">Kontakt</a>
+            <a href="#kontakt" class="nav-link-effect text-stone-600 hover:text-[#D4AF37]">Contact</a>
             <a href="#kontakt" class="border border-[#D4AF37] px-5 py-2.5 text-[#D4AF37] hover:bg-[#2C2A29] hover:text-white hover:border-[#2C2A29] transition-all duration-300 font-medium tracking-[0.15em]">Otvorena za projekte</a>
         </div>
     </nav>
 
+    <!-- HERO SECTION -->
     <section id="pocetna" class="h-screen flex items-center hero-art-bg px-6 md:px-16 relative overflow-hidden">
         <div class="max-w-4xl" data-aos="fade-up" data-aos-duration="1500">
             <span class="text-[#D4AF37] uppercase tracking-[0.35em] font-semibold text-xs block mb-5">ILUSTRACIJA &bull; MURALI &bull; SNOVI NA PLATNU</span>
@@ -106,6 +109,7 @@
         </div>
     </section>
 
+    <!-- SEKCIJA: PRIČA S ROMANIJE -->
     <section id="priča" class="py-32 md:py-44 bg-[#FDFBF7] px-6 md:px-16 overflow-hidden">
         <div class="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-16 md:gap-24">
             <div class="lg:w-1/2" data-aos="fade-right" data-aos-duration="1200">
@@ -113,19 +117,20 @@
                 <h2 class="text-3xl md:text-5xl font-normal text-[#2C2A29] mb-8 leading-tight">Povratak prirodi i<br><span class="italic text-stone-500 font-serif-art lowercase">slobodi stvaranja</span></h2>
                 <div class="h-[1px] w-12 bg-[#D4AF37]/50 mb-8"></div>
                 <div class="space-y-6 text-stone-500 text-sm md:text-base font-light leading-relaxed">
-                    <p>Nataša Konjević je akademska slikarica i ilustratorica koja je gradsku vrevu zamijenila tišinom, mirom i nepresušnom inspiracijom čarobne planine Romanije.</p>
+                    <p>Nataša Stević je akademska slikarica i ilustratorica koja je gradsku vrevu zamijenila tišinom, mirom i nepresušnom inspiracijom čarobne planine Romanije.</p>
                     <p>U svom ručno stvorenom šumskom ateljeu, daleko od užurbanog ritma modernog društva, ona oživljava neotkrivene svjetove kroz ilustracije knjiga, radove na platnu i monumentalne murale koji krase javne prostore.</p>
                     <p>Njezin rad slavi čistu jednostavnost života, duboku intuiciju i sve one tople, bajkovite priče koje odrasli često zaborave, a koje nas iznutra liječe.</p>
                 </div>
             </div>
             <div class="lg:w-1/2 w-full flex items-center justify-center" data-aos="fade-left" data-aos-duration="1200">
                 <div class="gallery-frame w-full max-w-[480px]">
-                    <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?q=80&w=600&auto=format&fit=crop" class="w-full h-auto object-cover grayscale-[15%] hover:grayscale-0 transition-all duration-700" alt="Nataša Konjević - Atelje Romanija">
+                    <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?q=80&w=600&auto=format&fit=crop" class="w-full h-auto object-cover grayscale-[15%] hover:grayscale-0 transition-all duration-700" alt="Nataša Stević - Atelje Romanija">
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- SEKCIJA: PORTFOLIO GALERIJA -->
     <section id="galerija" class="py-32 bg-accent-soft px-6 md:px-16 border-t border-b border-stone-200/40">
         <div class="max-w-6xl mx-auto">
             
@@ -137,6 +142,7 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
                 
+                <!-- Rad 1 -->
                 <div class="group relative overflow-hidden gallery-frame h-[480px] flex flex-col justify-between" data-aos="fade-up" data-aos-duration="1000">
                     <div class="w-full h-[360px] overflow-hidden">
                         <img src="https://images.unsplash.com/photo-1579783928621-7a13d66a62d1?q=80&w=600&auto=format&fit=crop" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" alt="Bajkovita ilustracija">
@@ -150,6 +156,7 @@
                     </div>
                 </div>
 
+                <!-- Rad 2 -->
                 <div class="group relative overflow-hidden gallery-frame h-[480px] flex flex-col justify-between" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
                     <div class="w-full h-[360px] overflow-hidden">
                         <img src="https://images.unsplash.com/photo-1580136579312-94651dfd596d?q=80&w=600&auto=format&fit=crop" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" alt="Ulični mural">
@@ -163,6 +170,7 @@
                     </div>
                 </div>
 
+                <!-- Rad 3 -->
                 <div class="group relative overflow-hidden gallery-frame h-[480px] flex flex-col justify-between" data-aos="fade-up" data-aos-duration="1000">
                     <div class="w-full h-[360px] overflow-hidden">
                         <img src="https://images.unsplash.com/photo-1605721911519-3dfeb3be25e7?q=80&w=600&auto=format&fit=crop" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" alt="Ilustracije za knjige">
@@ -176,6 +184,7 @@
                     </div>
                 </div>
 
+                <!-- Rad 4 -->
                 <div class="group relative overflow-hidden gallery-frame h-[480px] flex flex-col justify-between" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
                     <div class="w-full h-[360px] overflow-hidden">
                         <img src="https://images.unsplash.com/photo-1541701494587-cb58502866ab?q=80&w=600&auto=format&fit=crop" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" alt="Ulje na platnu">
@@ -193,6 +202,7 @@
         </div>
     </section>
 
+    <!-- SEKCIJA: FILOZOFIJA -->
     <section id="filozofija" class="py-36 bg-[#FDFBF7] px-6 md:px-16 relative overflow-hidden">
         <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[26rem] text-stone-200/30 pointer-events-none select-none font-serif-art">“</div>
         <div class="max-w-3xl mx-auto text-center relative z-10" data-aos="fade-up" data-aos-duration="1400">
@@ -202,11 +212,12 @@
             </h2>
             <div class="h-[1px] w-14 bg-[#D4AF37]/30 mx-auto mb-6"></div>
             <p class="text-xs text-stone-400 font-semibold tracking-[0.3em] uppercase">
-                — Nataša Konjević, Galerija ArtS
+                — Nataša Stević, Galerija ArtS
             </p>
         </div>
     </section>
 
+    <!-- SEKCIJA: KONTAKT -->
     <section id="kontakt" class="py-32 bg-white px-6 md:px-16 border-t border-stone-200/50">
         <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 md:gap-24">
             
@@ -264,6 +275,7 @@
         </div>
     </section>
 
+    <!-- FOOTER -->
     <footer class="py-12 bg-[#2C2A29] text-center text-[10px] tracking-[0.25em] uppercase text-stone-400">
         <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row justify-between items-center gap-4">
             <p>&copy; 2026 GALERIJA ARTS. SVA PRAVA PRIDRŽANA.</p>
@@ -276,6 +288,7 @@
         </div>
     </footer>
 
+    <!-- AOS (Animate On Scroll) Skripta -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({
