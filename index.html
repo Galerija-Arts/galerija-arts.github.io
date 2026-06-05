@@ -125,15 +125,25 @@
         
         .swiper-pagination-bullet-active { background: #D4AF37 !important; width: 35px !important; border-radius: 0px !important; }
         .swiper-pagination-bullet { background: #2C2A29; opacity: 0.15; border-radius: 0px !important; height: 1px !important; width: 18px !important; transition: all 0.4s ease; }
+
+        /* ZABRANA SELEKCIJE I PREUZIMANJA NA RAZINI KODA */
+        img {
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -o-user-select: none;
+            user-select: none;
+            pointer-events: none;
+        }
     </style>
 </head>
-<body class="antialiased selection:bg-[#F4EFE6] selection:text-[#2C2A29]">
+<body class="antialiased selection:bg-[#F4EFE6] selection:text-[#2C2A29] oncontextmenu="return false;" onselectstart="return false;" ondragstart="return false;">
 
     <!-- ELEMENTI ZA CUSTOM KURSOR -->
     <div id="cursor-dot" class="custom-cursor-dot hidden lg:block"></div>
     <div id="cursor-aura" class="custom-cursor-aura hidden lg:block"></div>
 
-    <!-- NAVBAR (Sada pročišćen, bez logotipa na vrhu) -->
+    <!-- NAVBAR -->
     <nav class="fixed w-full z-50 bg-[#FDFBF7]/80 backdrop-blur-xl border-b border-stone-200/30 flex justify-between items-center py-5 px-6 md:px-16 duration-300">
         <a href="#pocetna" class="text-xs uppercase tracking-[0.35em] font-light text-stone-400 hover:text-[#D4AF37] transition-colors cursor-pointer-target">
             ART ARCHIVE
@@ -147,14 +157,14 @@
         </div>
     </nav>
 
-    <!-- HERO SECTION (S integriranim, puno većim logotipom) -->
+    <!-- HERO SECTION (S dodatno povećanim logotipom) -->
     <section id="pocetna" class="pt-32 pb-20 md:pt-40 md:pb-28 bg-[#FDFBF7] px-6 md:px-16 border-b border-stone-200/20">
         <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             
             <div class="lg:col-span-7 space-y-8" data-aos="fade-up" data-aos-duration="1200">
-                <!-- Ovdje je tvoj predivni logo u velikom i upečatljivom formatu -->
-                <div class="inline-block cursor-pointer-target -ml-4 md:-ml-6">
-                    <img src="logo.png" class="h-28 md:h-36 w-auto object-contain transition-transform duration-300 hover:scale-[1.02]" alt="Galerija ArtS Veliki Logo">
+                <!-- Povećan logo na maksimalnu elegantnu razinu (h-36 do h-44) -->
+                <div class="inline-block cursor-pointer-target -ml-4 md:-ml-6 select-none">
+                    <img src="logo.png" class="h-36 md:h-44 w-auto object-contain transition-transform duration-300 hover:scale-[1.02]" alt="Galerija ArtS Veliki Logo">
                 </div>
 
                 <div class="space-y-4">
@@ -176,8 +186,10 @@
             </div>
             
             <div class="lg:col-span-5 w-full flex justify-end" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="200">
-                <div class="gallery-frame w-full max-w-[340px] shadow-lg">
+                <div class="gallery-frame w-full max-w-[340px] shadow-lg relative">
                     <img src="slika5.jpg" class="w-full h-[380px] object-cover grayscale-[10%] hover:grayscale-0 transition-all duration-700" alt="ArtS Teaser">
+                    <!-- Nevidljivi štit -->
+                    <div class="absolute inset-0 z-10 transparent-shield"></div>
                 </div>
             </div>
 
@@ -197,14 +209,15 @@
                 </div>
             </div>
             <div class="lg:w-1/2 w-full flex items-center justify-center" data-aos="fade-left" data-aos-duration="1200">
-                <div class="gallery-frame w-full max-w-[440px] cursor-pointer-target">
+                <div class="gallery-frame w-full max-w-[440px] cursor-pointer-target relative">
                     <img src="natasa6.jpg" class="w-full h-auto object-cover transition-all duration-700" alt="Nataša Stević u svom ateljeu">
+                    <div class="absolute inset-0 z-10 transparent-shield"></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- POSEBNA CENTRALNA SEKCIJA: SLIKA KOJU NIKADA NEĆU PRODATI -->
+    <!-- POSEBNA CENTRALNA SEKCIJA -->
     <section id="svjetlost" class="py-24 md:py-36 bg-white px-6 md:px-16 border-t border-b border-stone-200/30 relative overflow-hidden">
         <div class="max-w-6xl mx-auto flex flex-col lg:flex-row-reverse items-center gap-16 md:gap-24">
             
@@ -224,8 +237,9 @@
             </div>
             
             <div class="lg:w-1/2 w-full flex justify-center" data-aos="fade-right" data-aos-duration="1200">
-                <div class="gallery-frame w-full max-w-[420px] bg-white shadow-xl cursor-pointer-target">
+                <div class="gallery-frame w-full max-w-[420px] bg-white shadow-xl cursor-pointer-target relative">
                     <img src="slika10.jpg" class="w-full h-auto object-cover transition-all duration-700" alt="Slika Svjetlosti">
+                    <div class="absolute inset-0 z-10 bottom-16 transparent-shield"></div>
                     <div class="text-center pt-4 text-[10px] tracking-[0.2em] uppercase text-stone-400 font-medium border-t border-stone-100 mt-4">
                         "Naslikala sam svjetlost"
                     </div>
@@ -235,7 +249,7 @@
         </div>
     </section>
 
-    <!-- GLAVNA UKUPNA SEKCIJA: KOLEKCIJA S DVA SPOJENA 3D SLIJDERA -->
+    <!-- GLAVNA UKUPNA SEKCIJA -->
     <section id="galerija" class="py-24 bg-accent-soft px-6 md:px-16 overflow-hidden border-b border-stone-200/20">
         <div class="max-w-6xl mx-auto">
             
@@ -249,72 +263,80 @@
             <div class="swiper artSwiper1 cursor-pointer-target mb-16" data-aos="fade-up" data-aos-duration="1200">
                 <div class="swiper-wrapper">
                     
-                    <div class="swiper-slide flex flex-col justify-between">
-                        <div class="w-full h-[390px] overflow-hidden">
+                    <div class="swiper-slide flex flex-col justify-between relative">
+                        <div class="w-full h-[390px] overflow-hidden relative">
                             <img src="slika.jpg" alt="Šumska magija">
+                            <div class="absolute inset-0 z-10 transparent-shield"></div>
                         </div>
                         <div class="pt-3 text-center border-t border-stone-100">
                             <h4 class="font-normal text-sm text-[#2C2A29] font-serif-art italic">Šumska magija</h4>
                         </div>
                     </div>
 
-                    <div class="swiper-slide flex flex-col justify-between">
-                        <div class="w-full h-[390px] overflow-hidden">
+                    <div class="swiper-slide flex flex-col justify-between relative">
+                        <div class="w-full h-[390px] overflow-hidden relative">
                             <img src="slika1.jpg" alt="Melankolija labuda">
+                            <div class="absolute inset-0 z-10 transparent-shield"></div>
                         </div>
                         <div class="pt-3 text-center border-t border-stone-100">
                             <h4 class="font-normal text-sm text-[#2C2A29] font-serif-art italic">Melankolija labuda</h4>
                         </div>
                     </div>
 
-                    <div class="swiper-slide flex flex-col justify-between">
-                        <div class="w-full h-[390px] overflow-hidden">
+                    <div class="swiper-slide flex flex-col justify-between relative">
+                        <div class="w-full h-[390px] overflow-hidden relative">
                             <img src="slika2.jpg" alt="Korak kroz snove">
+                            <div class="absolute inset-0 z-10 transparent-shield"></div>
                         </div>
                         <div class="pt-3 text-center border-t border-stone-100">
                             <h4 class="font-normal text-sm text-[#2C2A29] font-serif-art italic">Korak kroz snove</h4>
                         </div>
                     </div>
 
-                    <div class="swiper-slide flex flex-col justify-between">
-                        <div class="w-full h-[390px] overflow-hidden">
+                    <div class="swiper-slide flex flex-col justify-between relative">
+                        <div class="w-full h-[390px] overflow-hidden relative">
                             <img src="slika3.jpg" alt="Između prošlosti i sadašnjosti">
+                            <div class="absolute inset-0 z-10 transparent-shield"></div>
                         </div>
                         <div class="pt-3 text-center border-t border-stone-100">
                             <h4 class="font-normal text-sm text-[#2C2A29] font-serif-art italic">Između prošlosti i sadašnjosti</h4>
                         </div>
                     </div>
 
-                    <div class="swiper-slide flex flex-col justify-between">
-                        <div class="w-full h-[390px] overflow-hidden">
+                    <div class="swiper-slide flex flex-col justify-between relative">
+                        <div class="w-full h-[390px] overflow-hidden relative">
                             <img src="slika4.jpg" alt="Sanjarenje u čamcu">
+                            <div class="absolute inset-0 z-10 transparent-shield"></div>
                         </div>
                         <div class="pt-3 text-center border-t border-stone-100">
                             <h4 class="font-normal text-sm text-[#2C2A29] font-serif-art italic">Sanjarenje u čamcu</h4>
                         </div>
                     </div>
 
-                    <div class="swiper-slide flex flex-col justify-between">
-                        <div class="w-full h-[390px] overflow-hidden">
+                    <div class="swiper-slide flex flex-col justify-between relative">
+                        <div class="w-full h-[390px] overflow-hidden relative">
                             <img src="slika5.jpg" alt="Zeleni baršun i ptica">
+                            <div class="absolute inset-0 z-10 transparent-shield"></div>
                         </div>
                         <div class="pt-3 text-center border-t border-stone-100">
                             <h4 class="font-normal text-sm text-[#2C2A29] font-serif-art italic">Zeleni baršun i ptica</h4>
                         </div>
                     </div>
 
-                    <div class="swiper-slide flex flex-col justify-between">
-                        <div class="w-full h-[390px] overflow-hidden">
+                    <div class="swiper-slide flex flex-col justify-between relative">
+                        <div class="w-full h-[390px] overflow-hidden relative">
                             <img src="slika6.jpg" alt="Inspiracija, Romanija">
+                            <div class="absolute inset-0 z-10 transparent-shield"></div>
                         </div>
                         <div class="pt-3 text-center border-t border-stone-100">
                             <h4 class="font-normal text-sm text-[#2C2A29] font-serif-art italic">Inspiracija, Romanija</h4>
                         </div>
                     </div>
 
-                    <div class="swiper-slide flex flex-col justify-between">
-                        <div class="w-full h-[390px] overflow-hidden">
+                    <div class="swiper-slide flex flex-col justify-between relative">
+                        <div class="w-full h-[390px] overflow-hidden relative">
                             <img src="slika7.jpg" alt="Acutus sensus">
+                            <div class="absolute inset-0 z-10 transparent-shield"></div>
                         </div>
                         <div class="pt-3 text-center border-t border-stone-100">
                             <h4 class="font-normal text-sm text-[#2C2A29] font-serif-art italic">Acutus sensus</h4>
@@ -331,54 +353,60 @@
             <div class="swiper artSwiper2 cursor-pointer-target" data-aos="fade-up" data-aos-duration="1200">
                 <div class="swiper-wrapper">
                     
-                    <div class="swiper-slide flex flex-col justify-between">
-                        <div class="w-full h-[390px] overflow-hidden">
+                    <div class="swiper-slide flex flex-col justify-between relative">
+                        <div class="w-full h-[390px] overflow-hidden relative">
                             <img src="slika11.jpg" alt="Miris svježeg cvijeća">
+                            <div class="absolute inset-0 z-10 transparent-shield"></div>
                         </div>
                         <div class="pt-3 text-center border-t border-stone-100">
                             <h4 class="font-normal text-sm text-[#2C2A29] font-serif-art italic">Miris svježeg cvijeća</h4>
                         </div>
                     </div>
 
-                    <div class="swiper-slide flex flex-col justify-between">
-                        <div class="w-full h-[390px] overflow-hidden">
+                    <div class="swiper-slide flex flex-col justify-between relative">
+                        <div class="w-full h-[390px] overflow-hidden relative">
                             <img src="slika12.jpg" alt="Sloboda">
+                            <div class="absolute inset-0 z-10 transparent-shield"></div>
                         </div>
                         <div class="pt-3 text-center border-t border-stone-100">
                             <h4 class="font-normal text-sm text-[#2C2A29] font-serif-art italic">Sloboda</h4>
                         </div>
                     </div>
 
-                    <div class="swiper-slide flex flex-col justify-between">
-                        <div class="w-full h-[390px] overflow-hidden">
+                    <div class="swiper-slide flex flex-col justify-between relative">
+                        <div class="w-full h-[390px] overflow-hidden relative">
                             <img src="slika13.jpg" alt="Serijal: Dugi brodovi">
+                            <div class="absolute inset-0 z-10 transparent-shield"></div>
                         </div>
                         <div class="pt-3 text-center border-t border-stone-100">
                             <h4 class="font-normal text-sm text-[#2C2A29] font-serif-art italic">Serijal: Dugi brodovi</h4>
                         </div>
                     </div>
 
-                    <div class="swiper-slide flex flex-col justify-between">
-                        <div class="w-full h-[390px] overflow-hidden">
+                    <div class="swiper-slide flex flex-col justify-between relative">
+                        <div class="w-full h-[390px] overflow-hidden relative">
                             <img src="slika14.jpg" alt="Radila sam tigra lava, ostaje puma">
+                            <div class="absolute inset-0 z-10 transparent-shield"></div>
                         </div>
                         <div class="pt-3 text-center border-t border-stone-100">
                             <h4 class="font-normal text-sm text-[#2C2A29] font-serif-art italic">Radila sam tigra lava, ostaje puma</h4>
                         </div>
                     </div>
 
-                    <div class="swiper-slide flex flex-col justify-between">
-                        <div class="w-full h-[390px] overflow-hidden">
+                    <div class="swiper-slide flex flex-col justify-between relative">
+                        <div class="w-full h-[390px] overflow-hidden relative">
                             <img src="slika15.jpg" alt="Lastavica">
+                            <div class="absolute inset-0 z-10 transparent-shield"></div>
                         </div>
                         <div class="pt-3 text-center border-t border-stone-100">
                             <h4 class="font-normal text-sm text-[#2C2A29] font-serif-art italic">Lastavica</h4>
                         </div>
                     </div>
 
-                    <div class="swiper-slide flex flex-col justify-between">
-                        <div class="w-full h-[390px] overflow-hidden">
+                    <div class="swiper-slide flex flex-col justify-between relative">
+                        <div class="w-full h-[390px] overflow-hidden relative">
                             <img src="slika16.jpg" alt="Parfem u zraku">
+                            <div class="absolute inset-0 z-10 transparent-shield"></div>
                         </div>
                         <div class="pt-3 text-center border-t border-stone-100">
                             <h4 class="font-normal text-sm text-[#2C2A29] font-serif-art italic">Parfem u zraku (Aroma samopouzdanja)</h4>
@@ -545,6 +573,20 @@
             });
         }
         setupCursorHovers();
+
+        // ELEMENTARNA BLOKADA ZA DESNI KLIK I SNIMANJE 1X1 TRANSPARENTNE SLIKE
+        document.addEventListener('contextmenu', function(e) {
+            if (e.target.tagName === 'IMG' || e.target.classList.contains('transparent-shield')) {
+                e.preventDefault();
+            }
+        });
+
+        document.addEventListener('keydown', function(e) {
+            // Blokada uobičajenih prečaca za save (Ctrl+S)
+            if ((e.ctrlKey || e.metaKey) && e.keyCode === 83) {
+                e.preventDefault();
+            }
+        });
     </script>
 </body>
 </html>
