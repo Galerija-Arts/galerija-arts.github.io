@@ -111,7 +111,7 @@
         }
 
         /* Premium klizač kroj */
-        .swiper { width: 100%; padding-top: 20px; padding-bottom: 80px; }
+        .swiper { width: 100%; padding-top: 20px; padding-bottom: 40px; }
         .swiper-slide { 
             width: 360px; 
             height: 490px; 
@@ -142,8 +142,7 @@
         <div class="space-x-8 hidden lg:flex items-center text-[10px] uppercase tracking-[0.25em] font-medium">
             <a href="#priča" class="nav-link-effect text-stone-600 hover:text-[#D4AF37] cursor-pointer-target">Umjetnica</a>
             <a href="#svjetlost" class="nav-link-effect text-stone-600 hover:text-[#D4AF37] cursor-pointer-target">Fokus</a>
-            <a href="#galerija" class="nav-link-effect text-stone-600 hover:text-[#D4AF37] cursor-pointer-target">Kolekcija</a>
-            <a href="#nove-slike" class="nav-link-effect text-stone-600 hover:text-[#D4AF37] cursor-pointer-target">Novi radovi</a>
+            <a href="#galerija" class="nav-link-effect text-[#D4AF37] font-semibold cursor-pointer-target">Kolekcija</a>
             <a href="#kontakt" class="nav-link-effect text-stone-600 hover:text-[#D4AF37] cursor-pointer-target">Kontakt</a>
         </div>
     </nav>
@@ -228,17 +227,18 @@
         </div>
     </section>
 
-    <!-- PRVA GALERIJA: COWERFLOW 3D SLIDER -->
-    <section id="galerija" class="py-24 bg-accent-soft px-6 md:px-16 overflow-hidden">
+    <!-- GLAVNA UKUPNA SEKCIJA: KOLEKCIJA S DVA SPOJENA 3D SLIJDERA -->
+    <section id="galerija" class="py-24 bg-accent-soft px-6 md:px-16 overflow-hidden border-b border-stone-200/20">
         <div class="max-w-6xl mx-auto">
             
-            <div class="text-center mb-12" data-aos="fade-up">
+            <div class="text-center mb-16" data-aos="fade-up">
                 <span class="text-[#D4AF37] uppercase tracking-[0.3em] text-[10px] font-semibold block mb-2">Glavni opus</span>
                 <h2 class="text-2xl md:text-4xl font-normal text-[#2C2A29] uppercase tracking-wider">Kolekcija Galerije ArtS</h2>
                 <div class="h-[1px] w-12 bg-[#D4AF37]/40 mx-auto mt-4"></div>
             </div>
 
-            <div class="swiper artSwiper cursor-pointer-target" data-aos="fade-up" data-aos-duration="1200">
+            <!-- PRVI SLIJDER -->
+            <div class="swiper artSwiper1 cursor-pointer-target mb-16" data-aos="fade-up" data-aos-duration="1200">
                 <div class="swiper-wrapper">
                     
                     <div class="swiper-slide flex flex-col justify-between">
@@ -314,88 +314,82 @@
                     </div>
 
                 </div>
-                <div class="swiper-pagination"></div>
+                <div class="swiper-pagination sp1"></div>
             </div>
+
+            <div class="w-16 h-[1px] bg-[#D4AF37]/20 mx-auto my-12" data-aos="fade-up"></div>
+
+            <!-- DRUGI SLIJDER -->
+            <div class="swiper artSwiper2 cursor-pointer-target" data-aos="fade-up" data-aos-duration="1200">
+                <div class="swiper-wrapper">
+                    
+                    <div class="swiper-slide flex flex-col justify-between">
+                        <div class="w-full h-[390px] overflow-hidden">
+                            <img src="slika11.jpg" alt="Miris svježeg cvijeća">
+                        </div>
+                        <div class="pt-3 text-center border-t border-stone-100">
+                            <h4 class="font-normal text-sm text-[#2C2A29] font-serif-art italic">Miris svježeg cvijeća</h4>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide flex flex-col justify-between">
+                        <div class="w-full h-[390px] overflow-hidden">
+                            <img src="slika12.jpg" alt="Sloboda">
+                        </div>
+                        <div class="pt-3 text-center border-t border-stone-100">
+                            <h4 class="font-normal text-sm text-[#2C2A29] font-serif-art italic">Sloboda</h4>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide flex flex-col justify-between">
+                        <div class="w-full h-[390px] overflow-hidden">
+                            <img src="slika13.jpg" alt="Serijal: Dugi brodovi">
+                        </div>
+                        <div class="pt-3 text-center border-t border-stone-100">
+                            <h4 class="font-normal text-sm text-[#2C2A29] font-serif-art italic">Serijal: Dugi brodovi</h4>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide flex flex-col justify-between">
+                        <div class="w-full h-[390px] overflow-hidden">
+                            <img src="slika14.jpg" alt="Radila sam tigra lava, ostaje puma">
+                        </div>
+                        <div class="pt-3 text-center border-t border-stone-100">
+                            <h4 class="font-normal text-sm text-[#2C2A29] font-serif-art italic">Radila sam tigra lava, ostaje puma</h4>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide flex flex-col justify-between">
+                        <div class="w-full h-[390px] overflow-hidden">
+                            <img src="slika15.jpg" alt="Lastavica">
+                        </div>
+                        <div class="pt-3 text-center border-t border-stone-100">
+                            <h4 class="font-normal text-sm text-[#2C2A29] font-serif-art italic">Lastavica</h4>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide flex flex-col justify-between">
+                        <div class="w-full h-[390px] overflow-hidden">
+                            <img src="slika16.jpg" alt="Parfem u zraku">
+                        </div>
+                        <div class="pt-3 text-center border-t border-stone-100">
+                            <h4 class="font-normal text-sm text-[#2C2A29] font-serif-art italic">Parfem u zraku (Aroma samopouzdanja)</h4>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="swiper-pagination sp2"></div>
+            </div>
+
         </div>
     </section>
 
-    <!-- DRUGA GALERIJA: NOVI RADOVI IZ ATELJEA -->
-    <section id="nove-slike" class="py-24 bg-white px-6 md:px-16 border-b border-stone-200/20">
-        <div class="max-w-6xl mx-auto">
-            
-            <div class="text-center mb-16" data-aos="fade-up">
-                <span class="text-[#D4AF37] uppercase tracking-[0.3em] text-[10px] font-semibold block mb-2">Svježa platna</span>
-                <h2 class="text-2xl md:text-4xl font-normal text-[#2C2A29] uppercase tracking-wider">Novi radovi iz ateljea</h2>
-                <div class="h-[1px] w-12 bg-[#D4AF37]/40 mx-auto mt-4"></div>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                
-                <div class="group relative overflow-hidden gallery-frame h-[490px] flex flex-col justify-between cursor-pointer-target" data-aos="fade-up" data-aos-duration="1000">
-                    <div class="w-full h-[390px] overflow-hidden">
-                        <img src="slika11.jpg" class="w-full h-full object-cover" alt="Miris svježeg cvijeća">
-                    </div>
-                    <div class="pt-3 flex justify-between items-end border-t border-stone-100">
-                        <h3 class="font-normal text-sm text-[#2C2A29] font-serif-art italic">Miris svježeg cvijeća</h3>
-                    </div>
-                </div>
-
-                <div class="group relative overflow-hidden gallery-frame h-[490px] flex flex-col justify-between cursor-pointer-target" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
-                    <div class="w-full h-[390px] overflow-hidden">
-                        <img src="slika12.jpg" class="w-full h-full object-cover" alt="Sloboda">
-                    </div>
-                    <div class="pt-3 flex justify-between items-end border-t border-stone-100">
-                        <h3 class="font-normal text-sm text-[#2C2A29] font-serif-art italic">Sloboda</h3>
-                    </div>
-                </div>
-
-                <div class="group relative overflow-hidden gallery-frame h-[490px] flex flex-col justify-between cursor-pointer-target" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                    <div class="w-full h-[390px] overflow-hidden">
-                        <img src="slika13.jpg" class="w-full h-full object-cover" alt="Serijal: Dugi brodovi">
-                    </div>
-                    <div class="pt-3 flex justify-between items-end border-t border-stone-100">
-                        <h3 class="font-normal text-sm text-[#2C2A29] font-serif-art italic">Serijal: Dugi brodovi</h3>
-                    </div>
-                </div>
-
-                <div class="group relative overflow-hidden gallery-frame h-[490px] flex flex-col justify-between cursor-pointer-target" data-aos="fade-up" data-aos-duration="1000">
-                    <div class="w-full h-[390px] overflow-hidden">
-                        <img src="slika14.jpg" class="w-full h-full object-cover" alt="Radila sam tigra lava, ostaje puma">
-                    </div>
-                    <div class="pt-3 flex justify-between items-end border-t border-stone-100">
-                        <h3 class="font-normal text-sm text-[#2C2A29] font-serif-art italic">Radila sam tigra lava, ostaje puma</h3>
-                    </div>
-                </div>
-
-                <div class="group relative overflow-hidden gallery-frame h-[490px] flex flex-col justify-between cursor-pointer-target" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
-                    <div class="w-full h-[390px] overflow-hidden">
-                        <img src="slika15.jpg" class="w-full h-full object-cover" alt="Lastavica">
-                    </div>
-                    <div class="pt-3 flex justify-between items-end border-t border-stone-100">
-                        <h3 class="font-normal text-sm text-[#2C2A29] font-serif-art italic">Lastavica</h3>
-                    </div>
-                </div>
-
-                <div class="group relative overflow-hidden gallery-frame h-[490px] flex flex-col justify-between cursor-pointer-target" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                    <div class="w-full h-[390px] overflow-hidden">
-                        <img src="slika16.jpg" class="w-full h-full object-cover" alt="Parfem u zraku">
-                    </div>
-                    <div class="pt-3 flex justify-between items-end border-t border-stone-100">
-                        <h3 class="font-normal text-sm text-[#2C2A29] font-serif-art italic">Parfem u zraku (Aroma samopouzdanja)</h3>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- ULTRA-MODERNA VEĆA KONTAKT SEKCIJA (Bez forme, skriveni linkovi) -->
+    <!-- ULTRA-MODERNA VEĆA KONTAKT SEKCIJA -->
     <section id="kontakt" class="py-32 md:py-44 bg-[#FDFBF7] px-6 md:px-16 relative">
         <div class="max-w-5xl mx-auto">
             
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
                 
-                <!-- Lijeva strana: Otvorena za ideje s puno većim i dominantnijim fontom -->
                 <div class="lg:col-span-7 space-y-8" data-aos="fade-right" data-aos-duration="1200">
                     <div class="space-y-4">
                         <span class="text-[#D4AF37] uppercase tracking-[0.4em] text-xs font-semibold block">KREATIVNE SURADNJE</span>
@@ -412,12 +406,10 @@
                     </div>
                 </div>
 
-                <!-- Desna strana: Skriveni, bolesno moderni linkovi za društvene mreže -->
                 <div class="lg:col-span-5 space-y-12 lg:pt-16" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="200">
                     <h3 class="text-xs uppercase tracking-[0.35em] text-stone-400 font-medium border-b border-stone-200/60 pb-3">Izravna veza s ateljeom</h3>
                     
                     <div class="flex flex-col space-y-8">
-                        <!-- Instagram skriveni luksuzni link -->
                         <a href="https://www.instagram.com/_galerija.arts/" target="_blank" class="group flex flex-col cursor-pointer-target">
                             <span class="text-3xl md:text-4xl font-light text-[#2C2A29] tracking-[0.15em] uppercase font-serif-art transition-colors duration-300 group-hover:text-[#D4AF37]">
                                 INSTAGRAM
@@ -425,7 +417,6 @@
                             <span class="text-[10px] tracking-[0.2em] text-stone-400 mt-1 uppercase font-medium">Pošaljite DM poruku</span>
                         </a>
 
-                        <!-- Facebook skriveni luksuzni link -->
                         <a href="https://www.facebook.com/hippo911art" target="_blank" class="group flex flex-col cursor-pointer-target">
                             <span class="text-3xl md:text-4xl font-light text-[#2C2A29] tracking-[0.15em] uppercase font-serif-art transition-colors duration-300 group-hover:text-[#D4AF37]">
                                 FACEBOOK
@@ -435,6 +426,37 @@
                     </div>
                 </div>
 
+            </div>
+
+        </div>
+    </section>
+
+    <!-- NOVO: LUKSUZNA PRAVNA OBAVIJEST (AUTORSKA PRAVA, PRIVATNOST & GDPR KAZNENA ODGOVORNOST) -->
+    <section class="py-12 bg-[#F3EFEA] border-t border-stone-200/40 px-6 md:px-16 text-stone-500">
+        <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-[10px] uppercase tracking-[0.2em] font-light leading-relaxed">
+            
+            <!-- Autorska prava -->
+            <div class="space-y-2 cursor-pointer-target" data-aos="fade-up">
+                <p class="font-semibold text-stone-700 tracking-[0.25em]"><i class="fas fa-copyright text-[#D4AF37] mr-1.5"></i> LEGAL NOTICE & COPYRIGHT</p>
+                <p class="normal-case text-stone-400 tracking-normal font-light">
+                    Sva autorska prava na umjetnička djela, tekstove, vizualne materijale i koncepte prikazane na ovoj domeni u potpunosti pripadaju autorici Nataši Stević. Nijedan dio ovog weba ne smije se reproducirati bez pisane suglasnosti.
+                </p>
+            </div>
+
+            <!-- GDPR i Privatnost -->
+            <div class="space-y-2 cursor-pointer-target" data-aos="fade-up" data-aos-delay="100">
+                <p class="font-semibold text-stone-700 tracking-[0.25em]"><i class="fas fa-shield-halved text-[#D4AF37] mr-1.5"></i> PRIVACY & GDPR PROTECTION</p>
+                <p class="normal-case text-stone-400 tracking-normal font-light">
+                    Ovaj portfolio poštuje Opću uredbu o zaštiti podataka (GDPR). Svi vaši podatci i interakcije ostaju strogo povjerljivi i koriste se isključivo za potrebe direktne komunikacije s ateljeom na Romaniji.
+                </p>
+            </div>
+
+            <!-- Kaznena odgovornost -->
+            <div class="space-y-2 cursor-pointer-target" data-aos="fade-up" data-aos-delay="200">
+                <p class="font-semibold text-stone-800 tracking-[0.25em]"><i class="fas fa-gavel text-[#D4AF37] mr-1.5"></i> KAZNENA ODGOVORNOST</p>
+                <p class="normal-case text-stone-500 tracking-normal font-light font-medium">
+                    Svaka neovlaštena zlouporaba, preuzimanje, nelegalna distribucija ili komercijalno korištenje radova s ove domene bez izričite dozvole autorice predstavlja povredu zakona te podliježe trenutnoj materijalnoj i kaznenoj odgovornosti.
+                </p>
             </div>
 
         </div>
@@ -457,18 +479,29 @@
     <script>
         AOS.init({ once: true, offset: 80 });
 
-        var swiper = new Swiper(".artSwiper", {
+        var swiper1 = new Swiper(".artSwiper1", {
             effect: "coverflow",
             grabCursor: true,
             centeredSlides: true,
             slidesPerView: "auto",
             coverflowEffect: { rotate: 3, stretch: -10, depth: 50, modifier: 1.2, slideShadows: false },
-            pagination: { el: ".swiper-pagination", clickable: true },
+            pagination: { el: ".sp1", clickable: true },
             loop: true,
             autoplay: { delay: 4500, disableOnInteraction: false }
         });
 
-        // SKRIPTA ZA LUKSUZNI TRACER KURSOR S BLAGIM KAŠNJENJEM
+        var swiper2 = new Swiper(".artSwiper2", {
+            effect: "coverflow",
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: "auto",
+            coverflowEffect: { rotate: 3, stretch: -10, depth: 50, modifier: 1.2, slideShadows: false },
+            pagination: { el: ".sp2", clickable: true },
+            loop: true,
+            autoplay: { delay: 5000, disableOnInteraction: false }
+        });
+
+        // SKRIPTA ZA LUKSUZNI TRACER KURSOR
         const dot = document.getElementById('cursor-dot');
         const aura = document.getElementById('cursor-aura');
 
@@ -495,7 +528,6 @@
         }
         animateAura();
 
-        // DINAMIČKO OSVJEŽAVANJE HOVERA ZA SVE REKREIRANE PREMIUM ELEMENTE
         function setupCursorHovers() {
             const targets = document.querySelectorAll('.cursor-pointer-target');
             targets.forEach(item => {
