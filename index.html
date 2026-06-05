@@ -14,6 +14,10 @@
     <meta property="og:description" content="Umjetnost inspirirana prirodom, tišinom planine i djetetom u nama.">
     <meta property="og:image" content="slika10.jpg">
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="apple-touch-icon" href="logo.png">
+
     <!-- Google Fonts: Playfair Display i Inter -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
     
@@ -110,21 +114,216 @@
             width: 100%;
         }
 
-        /* Premium klizač kroj */
-        .swiper { width: 100%; padding-top: 20px; padding-bottom: 40px; }
+        /* GALERIJA - ULTRA MODERNI DIZAJN */
+
+        /* Swiper ostaje ali s upgradeanim izgledom */
+        .swiper { width: 100%; padding-top: 10px; padding-bottom: 50px; }
         .swiper-slide { 
-            width: 360px; 
-            height: 490px; 
-            background-color: #ffffff;
-            padding: 16px;
-            border: 1px solid rgba(44, 42, 41, 0.05);
-            box-shadow: 0 20px 50px rgba(44, 42, 41, 0.04);
+            width: 320px;
+            background: transparent;
+            padding: 0;
+            border: none;
+            box-shadow: none;
+            position: relative;
+            overflow: hidden;
         }
-        .swiper-slide img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.5s cubic-bezier(0.16, 1, 0.3, 1); }
-        .swiper-slide:hover img { transform: scale(1.05); }
-        
-        .swiper-pagination-bullet-active { background: #D4AF37 !important; width: 35px !important; border-radius: 0px !important; }
-        .swiper-pagination-bullet { background: #2C2A29; opacity: 0.15; border-radius: 0px !important; height: 1px !important; width: 18px !important; transition: all 0.4s ease; }
+        .swiper-slide .slide-inner {
+            position: relative;
+            overflow: hidden;
+        }
+        .swiper-slide img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1); display: block; }
+        .swiper-slide:hover img { transform: scale(1.08); }
+
+        /* Hover overlay s naslovom */
+        .slide-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(44,42,41,0.85) 0%, transparent 50%);
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            display: flex;
+            align-items: flex-end;
+            padding: 20px;
+            z-index: 5;
+        }
+        .swiper-slide:hover .slide-overlay { opacity: 1; }
+        .slide-overlay-title {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            color: #FDFBF7;
+            font-size: 0.9rem;
+            line-height: 1.3;
+        }
+        .slide-overlay-num {
+            font-family: 'Inter', sans-serif;
+            font-size: 9px;
+            letter-spacing: 0.3em;
+            color: #D4AF37;
+            text-transform: uppercase;
+            margin-bottom: 6px;
+            display: block;
+        }
+
+        /* Naslovna traka ispod slike */
+        .slide-caption {
+            padding: 14px 0 0 0;
+            border-top: 1px solid rgba(44,42,41,0.08);
+            margin-top: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .slide-caption-title {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 0.82rem;
+            color: #2C2A29;
+        }
+        .slide-caption-icon {
+            width: 28px;
+            height: 28px;
+            border: 1px solid rgba(44,42,41,0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 9px;
+            color: #8a8481;
+            transition: all 0.3s ease;
+            flex-shrink: 0;
+        }
+        .swiper-slide:hover .slide-caption-icon {
+            background: #D4AF37;
+            border-color: #D4AF37;
+            color: white;
+        }
+
+        /* Numeričke navigacijske strelice */
+        .gallery-nav {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            justify-content: flex-end;
+            margin-bottom: 20px;
+        }
+        .gallery-nav-btn {
+            width: 44px;
+            height: 44px;
+            border: 1px solid rgba(44,42,41,0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+            color: #2C2A29;
+            cursor: none;
+            transition: all 0.3s ease;
+            background: transparent;
+        }
+        .gallery-nav-btn:hover {
+            background: #2C2A29;
+            color: #FDFBF7;
+        }
+        .gallery-count {
+            font-family: 'Inter', sans-serif;
+            font-size: 10px;
+            letter-spacing: 0.2em;
+            color: #8a8481;
+        }
+
+        /* Gallery section label */
+        .gallery-section-label {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+        .gallery-section-label span {
+            font-family: 'Inter', sans-serif;
+            font-size: 9px;
+            letter-spacing: 0.35em;
+            text-transform: uppercase;
+            color: #D4AF37;
+            font-weight: 500;
+        }
+        .gallery-section-line {
+            flex: 1;
+            height: 1px;
+            background: rgba(44,42,41,0.08);
+        }
+
+        /* SLIDE VISINE - raznolike za dinamičnost */
+        .h-short { height: 340px; }
+        .h-tall   { height: 460px; }
+        .h-mid    { height: 400px; }
+
+        .swiper-pagination-bullet-active { background: #D4AF37 !important; width: 28px !important; border-radius: 0px !important; }
+        .swiper-pagination-bullet { background: #2C2A29; opacity: 0.12; border-radius: 0px !important; height: 1px !important; width: 14px !important; transition: all 0.4s ease; }
+
+        /* LIGHTBOX */
+        #lightbox {
+            position: fixed;
+            inset: 0;
+            z-index: 99995;
+            background: rgba(20, 18, 18, 0.97);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 20px;
+            padding: 24px;
+            backdrop-filter: blur(8px);
+        }
+        #lightbox.active { display: flex; }
+        #lightbox img {
+            max-width: 100%;
+            max-height: 80vh;
+            object-fit: contain;
+            box-shadow: 0 40px 100px rgba(0,0,0,0.6);
+            pointer-events: none;
+        }
+        #lightbox-caption {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            color: rgba(253,251,247,0.7);
+            font-size: 0.95rem;
+            letter-spacing: 0.02em;
+        }
+        #lightbox-close {
+            position: absolute;
+            top: 24px;
+            right: 28px;
+            color: rgba(253,251,247,0.5);
+            font-size: 11px;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            cursor: none;
+            transition: color 0.3s ease;
+            font-family: 'Inter', sans-serif;
+            background: transparent;
+            border: none;
+        }
+        #lightbox-close:hover { color: #D4AF37; }
+        #lightbox-prev, #lightbox-next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: transparent;
+            border: 1px solid rgba(253,251,247,0.15);
+            color: rgba(253,251,247,0.5);
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: none;
+            transition: all 0.3s ease;
+            font-size: 12px;
+        }
+        #lightbox-prev { left: 20px; }
+        #lightbox-next { right: 20px; }
+        #lightbox-prev:hover, #lightbox-next:hover {
+            border-color: #D4AF37;
+            color: #D4AF37;
+        }
 
         /* Pozadina bez img/ mape */
         .hero-bg { 
@@ -148,18 +347,153 @@
             writing-mode: vertical-rl;
             text-transform: uppercase;
         }
+
+        /* SCROLL PROGRESS BAR */
+        #scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 2px;
+            width: 0%;
+            background: linear-gradient(90deg, #D4AF37, #f0d060, #D4AF37);
+            z-index: 99999;
+            transition: width 0.1s linear;
+        }
+
+        /* GRAIN TEXTURE OVERLAY */
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            z-index: 9990;
+            pointer-events: none;
+            opacity: 0.022;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+            background-size: 200px 200px;
+        }
+
+        /* PAGE REVEAL LOADER */
+        #page-loader {
+            position: fixed;
+            inset: 0;
+            background-color: #2C2A29;
+            z-index: 99998;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 20px;
+            transition: opacity 0.8s ease, visibility 0.8s ease;
+        }
+        #page-loader.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+        .loader-line {
+            width: 60px;
+            height: 1px;
+            background: rgba(212, 175, 55, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        .loader-line::after {
+            content: '';
+            position: absolute;
+            left: -100%;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: #D4AF37;
+            animation: loaderSlide 1.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+        }
+        @keyframes loaderSlide {
+            0% { left: -100%; }
+            50% { left: 0%; }
+            100% { left: 100%; }
+        }
+        .loader-text {
+            font-family: 'Inter', sans-serif;
+            font-size: 9px;
+            letter-spacing: 0.4em;
+            text-transform: uppercase;
+            color: rgba(212, 175, 55, 0.6);
+            animation: loaderFade 1.5s ease forwards;
+        }
+        @keyframes loaderFade {
+            0% { opacity: 0; }
+            30% { opacity: 1; }
+            80% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+
+        /* MARQUEE TICKER - EDITORIAL BOLD */
+        .marquee-wrapper {
+            overflow: hidden;
+            background: #2C2A29;
+            padding: 0;
+            position: relative;
+        }
+        .marquee-track {
+            display: inline-flex;
+            align-items: center;
+            animation: marqueeScroll 32s linear infinite;
+            will-change: transform;
+        }
+        .marquee-track:hover { animation-play-state: paused; }
+        @keyframes marqueeScroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .marquee-item {
+            display: inline-flex;
+            align-items: center;
+            gap: 0;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+        .marquee-word {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.5rem, 3vw, 2.2rem);
+            font-weight: 400;
+            line-height: 1;
+            padding: 18px 32px;
+            color: #FDFBF7;
+            letter-spacing: 0.02em;
+            transition: color 0.3s ease;
+        }
+        .marquee-word.italic-gold {
+            font-style: italic;
+            color: #D4AF37;
+        }
+        .marquee-divider {
+            color: rgba(212, 175, 55, 0.4);
+            font-size: 1rem;
+            padding: 0 4px;
+            flex-shrink: 0;
+            font-family: 'Inter', sans-serif;
+            font-weight: 100;
+        }
     </style>
 </head>
 <body class="antialiased selection:bg-[#F4EFE6] selection:text-[#2C2A29]" oncontextmenu="return false;" onselectstart="return false;" ondragstart="return false;">
+
+    <!-- SCROLL PROGRESS BAR -->
+    <div id="scroll-progress"></div>
+
+    <!-- PAGE LOADER -->
+    <div id="page-loader">
+        <span class="loader-text">Galerija ArtS &nbsp;&bull;&nbsp; Nataša Stević</span>
+        <div class="loader-line"></div>
+    </div>
 
     <!-- ELEMENTI ZA CUSTOM KURSOR -->
     <div id="cursor-dot" class="custom-cursor-dot hidden lg:block"></div>
     <div id="cursor-aura" class="custom-cursor-aura hidden lg:block"></div>
 
     <!-- NAVBAR -->
-    <nav class="fixed w-full z-50 bg-[#FDFBF7]/80 backdrop-blur-xl border-b border-stone-200/30 flex justify-between items-center py-5 px-6 md:px-16 duration-300">
-        <a href="#pocetna" class="text-xs uppercase tracking-[0.35em] font-light text-stone-400 hover:text-[#D4AF37] transition-colors cursor-pointer-target">
-            ART ARCHIVE
+    <nav class="fixed w-full z-50 bg-[#FDFBF7]/80 backdrop-blur-xl border-b border-stone-200/30 flex justify-between items-center py-4 px-6 md:px-16 duration-300">
+        <a href="#pocetna" class="cursor-pointer-target">
+            <img src="logo.png" alt="Galerija ArtS" class="h-10 md:h-12 w-auto object-contain transition-opacity duration-300 hover:opacity-70">
         </a>
         
         <div class="space-x-8 hidden lg:flex items-center text-[10px] uppercase tracking-[0.25em] font-medium">
@@ -230,6 +564,49 @@
         </div>
     </section>
 
+    <!-- MARQUEE TICKER - EDITORIAL BOLD -->
+    <div class="marquee-wrapper">
+        <div class="marquee-track">
+            <span class="marquee-item">
+                <span class="marquee-word">Akademska Slikarica</span>
+                <span class="marquee-divider">—</span>
+                <span class="marquee-word italic-gold">Romanija</span>
+                <span class="marquee-divider">—</span>
+                <span class="marquee-word">Ilustratorica</span>
+                <span class="marquee-divider">—</span>
+                <span class="marquee-word italic-gold">Murali</span>
+                <span class="marquee-divider">—</span>
+                <span class="marquee-word">Galerija ArtS</span>
+                <span class="marquee-divider">—</span>
+                <span class="marquee-word italic-gold">Radovi na Platnu</span>
+                <span class="marquee-divider">—</span>
+                <span class="marquee-word">Šumski Atelje</span>
+                <span class="marquee-divider">—</span>
+                <span class="marquee-word italic-gold">Po Narudžbi</span>
+                <span class="marquee-divider">—</span>
+            </span>
+            <!-- Duplikat za beskonačnu petlju -->
+            <span class="marquee-item">
+                <span class="marquee-word">Akademska Slikarica</span>
+                <span class="marquee-divider">—</span>
+                <span class="marquee-word italic-gold">Romanija</span>
+                <span class="marquee-divider">—</span>
+                <span class="marquee-word">Ilustratorica</span>
+                <span class="marquee-divider">—</span>
+                <span class="marquee-word italic-gold">Murali</span>
+                <span class="marquee-divider">—</span>
+                <span class="marquee-word">Galerija ArtS</span>
+                <span class="marquee-divider">—</span>
+                <span class="marquee-word italic-gold">Radovi na Platnu</span>
+                <span class="marquee-divider">—</span>
+                <span class="marquee-word">Šumski Atelje</span>
+                <span class="marquee-divider">—</span>
+                <span class="marquee-word italic-gold">Po Narudžbi</span>
+                <span class="marquee-divider">—</span>
+            </span>
+        </div>
+    </div>
+
     <!-- SEKCIJA: PRIČA S ROMANIJE -->
     <section id="priča" class="py-24 md:py-36 bg-[#FDFBF7] px-6 md:px-16 overflow-hidden">
         <div class="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-16 md:gap-24">
@@ -283,242 +660,261 @@
         </div>
     </section>
 
+    <!-- LIGHTBOX -->
+    <div id="lightbox" role="dialog" aria-modal="true">
+        <button id="lightbox-close"><i class="fas fa-times mr-2"></i> Zatvori</button>
+        <button id="lightbox-prev"><i class="fas fa-chevron-left"></i></button>
+        <img id="lightbox-img" src="" alt="">
+        <p id="lightbox-caption"></p>
+        <button id="lightbox-next"><i class="fas fa-chevron-right"></i></button>
+    </div>
+
     <!-- GLAVNA UKUPNA SEKCIJA -->
-    <section id="galerija" class="py-24 bg-accent-soft px-6 md:px-16 overflow-hidden border-b border-stone-200/20">
+    <section id="galerija" class="py-24 bg-[#FDFBF7] px-6 md:px-16 overflow-hidden border-b border-stone-200/20">
         <div class="max-w-6xl mx-auto">
             
-            <div class="text-center mb-16" data-aos="fade-up">
+            <div class="text-center mb-20" data-aos="fade-up">
                 <span class="text-[#D4AF37] uppercase tracking-[0.3em] text-[10px] font-semibold block mb-2">Glavni opus</span>
                 <h2 class="text-2xl md:text-4xl font-normal text-[#2C2A29] uppercase tracking-wider">Kolekcija Galerije ArtS</h2>
                 <div class="h-[1px] w-12 bg-[#D4AF37]/40 mx-auto mt-4"></div>
             </div>
 
-            <!-- PRVI SLIJDER -->
-            <div class="swiper artSwiper1 cursor-pointer-target mb-16" data-aos="fade-up" data-aos-duration="1200">
-                <div class="swiper-wrapper">
-                    
-                    <div class="swiper-slide flex flex-col justify-between relative">
-                        <div class="w-full h-[390px] overflow-hidden relative">
-                            <img src="slika.jpg" alt="Šumska magija">
-                            <div class="absolute inset-0 z-10 transparent-shield"></div>
-                        </div>
-                        <div class="pt-3 text-center border-t border-stone-100">
-                            <h4 class="font-normal text-sm text-[#2C2A29] font-serif-art italic">Šumska magija</h4>
-                        </div>
+            <!-- === GALERIJA I === -->
+            <div data-aos="fade-up" data-aos-duration="1000">
+                <div class="gallery-section-label">
+                    <span>Serija I &mdash; Slike</span>
+                    <div class="gallery-section-line"></div>
+                    <div class="gallery-nav">
+                        <button class="gallery-nav-btn cursor-pointer-target" onclick="swiper1.slidePrev()"><i class="fas fa-arrow-left"></i></button>
+                        <button class="gallery-nav-btn cursor-pointer-target" onclick="swiper1.slideNext()"><i class="fas fa-arrow-right"></i></button>
                     </div>
-
-                    <div class="swiper-slide flex flex-col justify-between relative">
-                        <div class="w-full h-[390px] overflow-hidden relative">
-                            <img src="slika1.jpg" alt="Melankolija labuda">
-                            <div class="absolute inset-0 z-10 transparent-shield"></div>
-                        </div>
-                        <div class="pt-3 text-center border-t border-stone-100">
-                            <h4 class="font-normal text-sm text-[#2C2A29] font-serif-art italic">Melankolija labuda</h4>
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide flex flex-col justify-between relative">
-                        <div class="w-full h-[390px] overflow-hidden relative">
-                            <img src="slika2.jpg" alt="Korak kroz snove">
-                            <div class="absolute inset-0 z-10 transparent-shield"></div>
-                        </div>
-                        <div class="pt-3 text-center border-t border-stone-100">
-                            <h4 class="font-normal text-sm text-[#2C2A29] font-serif-art italic">Korak kroz snove</h4>
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide flex flex-col justify-between relative">
-                        <div class="w-full h-[390px] overflow-hidden relative">
-                            <img src="slika3.jpg" alt="Između prošlosti i sadašnjosti">
-                            <div class="absolute inset-0 z-10 transparent-shield"></div>
-                        </div>
-                        <div class="pt-3 text-center border-t border-stone-100">
-                            <h4 class="font-normal text-sm text-[#2C2A29] font-serif-art italic">Između prošlosti i sadašnjosti</h4>
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide flex flex-col justify-between relative">
-                        <div class="w-full h-[390px] overflow-hidden relative">
-                            <img src="slika4.jpg" alt="Sanjarenje u čamcu">
-                            <div class="absolute inset-0 z-10 transparent-shield"></div>
-                        </div>
-                        <div class="pt-3 text-center border-t border-stone-100">
-                            <h4 class="font-normal text-sm text-[#2C2A29] font-serif-art italic">Sanjarenje u čamcu</h4>
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide flex flex-col justify-between relative">
-                        <div class="w-full h-[390px] overflow-hidden relative">
-                            <img src="slika5.jpg" alt="Zeleni baršun i ptica">
-                            <div class="absolute inset-0 z-10 transparent-shield"></div>
-                        </div>
-                        <div class="pt-3 text-center border-t border-stone-100">
-                            <h4 class="font-normal text-sm text-[#2C2A29] font-serif-art italic">Zeleni baršun i ptica</h4>
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide flex flex-col justify-between relative">
-                        <div class="w-full h-[390px] overflow-hidden relative">
-                            <img src="slika6.jpg" alt="Inspiracija, Romanija">
-                            <div class="absolute inset-0 z-10 transparent-shield"></div>
-                        </div>
-                        <div class="pt-3 text-center border-t border-stone-100">
-                            <h4 class="font-normal text-sm text-[#2C2A29] font-serif-art italic">Inspiracija, Romanija</h4>
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide flex flex-col justify-between relative">
-                        <div class="w-full h-[390px] overflow-hidden relative">
-                            <img src="slika7.jpg" alt="Acutus sensus">
-                            <div class="absolute inset-0 z-10 transparent-shield"></div>
-                        </div>
-                        <div class="pt-3 text-center border-t border-stone-100">
-                            <h4 class="font-normal text-sm text-[#2C2A29] font-serif-art italic">Acutus sensus</h4>
-                        </div>
-                    </div>
-
                 </div>
-                <div class="swiper-pagination sp1"></div>
+                <div class="swiper artSwiper1 cursor-pointer-target">
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide cursor-pointer-target" onclick="openLightbox(this, 'Šumska magija')">
+                            <div class="slide-inner h-tall">
+                                <img src="slika.jpg" alt="Šumska magija">
+                                <div class="slide-overlay"><span><span class="slide-overlay-num">01</span><span class="slide-overlay-title">Šumska magija</span></span></div>
+                                <div class="absolute inset-0 z-10 transparent-shield"></div>
+                            </div>
+                            <div class="slide-caption"><span class="slide-caption-title">Šumska magija</span><div class="slide-caption-icon"><i class="fas fa-expand"></i></div></div>
+                        </div>
+
+                        <div class="swiper-slide cursor-pointer-target" onclick="openLightbox(this, 'Melankolija labuda')">
+                            <div class="slide-inner h-short">
+                                <img src="slika1.jpg" alt="Melankolija labuda">
+                                <div class="slide-overlay"><span><span class="slide-overlay-num">02</span><span class="slide-overlay-title">Melankolija labuda</span></span></div>
+                                <div class="absolute inset-0 z-10 transparent-shield"></div>
+                            </div>
+                            <div class="slide-caption"><span class="slide-caption-title">Melankolija labuda</span><div class="slide-caption-icon"><i class="fas fa-expand"></i></div></div>
+                        </div>
+
+                        <div class="swiper-slide cursor-pointer-target" onclick="openLightbox(this, 'Korak kroz snove')">
+                            <div class="slide-inner h-mid">
+                                <img src="slika2.jpg" alt="Korak kroz snove">
+                                <div class="slide-overlay"><span><span class="slide-overlay-num">03</span><span class="slide-overlay-title">Korak kroz snove</span></span></div>
+                                <div class="absolute inset-0 z-10 transparent-shield"></div>
+                            </div>
+                            <div class="slide-caption"><span class="slide-caption-title">Korak kroz snove</span><div class="slide-caption-icon"><i class="fas fa-expand"></i></div></div>
+                        </div>
+
+                        <div class="swiper-slide cursor-pointer-target" onclick="openLightbox(this, 'Između prošlosti i sadašnjosti')">
+                            <div class="slide-inner h-tall">
+                                <img src="slika3.jpg" alt="Između prošlosti i sadašnjosti">
+                                <div class="slide-overlay"><span><span class="slide-overlay-num">04</span><span class="slide-overlay-title">Između prošlosti i sadašnjosti</span></span></div>
+                                <div class="absolute inset-0 z-10 transparent-shield"></div>
+                            </div>
+                            <div class="slide-caption"><span class="slide-caption-title">Između prošlosti i sadašnjosti</span><div class="slide-caption-icon"><i class="fas fa-expand"></i></div></div>
+                        </div>
+
+                        <div class="swiper-slide cursor-pointer-target" onclick="openLightbox(this, 'Sanjarenje u čamcu')">
+                            <div class="slide-inner h-short">
+                                <img src="slika4.jpg" alt="Sanjarenje u čamcu">
+                                <div class="slide-overlay"><span><span class="slide-overlay-num">05</span><span class="slide-overlay-title">Sanjarenje u čamcu</span></span></div>
+                                <div class="absolute inset-0 z-10 transparent-shield"></div>
+                            </div>
+                            <div class="slide-caption"><span class="slide-caption-title">Sanjarenje u čamcu</span><div class="slide-caption-icon"><i class="fas fa-expand"></i></div></div>
+                        </div>
+
+                        <div class="swiper-slide cursor-pointer-target" onclick="openLightbox(this, 'Zeleni baršun i ptica')">
+                            <div class="slide-inner h-mid">
+                                <img src="slika5.jpg" alt="Zeleni baršun i ptica">
+                                <div class="slide-overlay"><span><span class="slide-overlay-num">06</span><span class="slide-overlay-title">Zeleni baršun i ptica</span></span></div>
+                                <div class="absolute inset-0 z-10 transparent-shield"></div>
+                            </div>
+                            <div class="slide-caption"><span class="slide-caption-title">Zeleni baršun i ptica</span><div class="slide-caption-icon"><i class="fas fa-expand"></i></div></div>
+                        </div>
+
+                        <div class="swiper-slide cursor-pointer-target" onclick="openLightbox(this, 'Inspiracija, Romanija')">
+                            <div class="slide-inner h-tall">
+                                <img src="slika6.jpg" alt="Inspiracija, Romanija">
+                                <div class="slide-overlay"><span><span class="slide-overlay-num">07</span><span class="slide-overlay-title">Inspiracija, Romanija</span></span></div>
+                                <div class="absolute inset-0 z-10 transparent-shield"></div>
+                            </div>
+                            <div class="slide-caption"><span class="slide-caption-title">Inspiracija, Romanija</span><div class="slide-caption-icon"><i class="fas fa-expand"></i></div></div>
+                        </div>
+
+                        <div class="swiper-slide cursor-pointer-target" onclick="openLightbox(this, 'Acutus sensus')">
+                            <div class="slide-inner h-short">
+                                <img src="slika7.jpg" alt="Acutus sensus">
+                                <div class="slide-overlay"><span><span class="slide-overlay-num">08</span><span class="slide-overlay-title">Acutus sensus</span></span></div>
+                                <div class="absolute inset-0 z-10 transparent-shield"></div>
+                            </div>
+                            <div class="slide-caption"><span class="slide-caption-title">Acutus sensus</span><div class="slide-caption-icon"><i class="fas fa-expand"></i></div></div>
+                        </div>
+
+                    </div>
+                    <div class="swiper-pagination sp1 mt-6"></div>
+                </div>
             </div>
 
-            <div class="w-16 h-[1px] bg-[#D4AF37]/20 mx-auto my-12" data-aos="fade-up"></div>
+            <div class="w-full h-[1px] bg-gradient-to-r from-transparent via-[#D4AF37]/20 to-transparent my-16" data-aos="fade-up"></div>
 
-            <!-- DRUGI SLIJDER -->
-            <div class="swiper artSwiper2 cursor-pointer-target mb-16" data-aos="fade-up" data-aos-duration="1200">
-                <div class="swiper-wrapper">
-                    
-                    <div class="swiper-slide flex flex-col justify-between relative">
-                        <div class="w-full h-[390px] overflow-hidden relative">
-                            <img src="slika11.jpg" alt="Miris svježeg cvijeća">
-                            <div class="absolute inset-0 z-10 transparent-shield"></div>
-                        </div>
-                        <div class="pt-3 text-center border-t border-stone-100">
-                            <h4 class="font-normal text-sm text-[#2C2A29] font-serif-art italic">Miris svježeg cvijeća</h4>
-                        </div>
+            <!-- === GALERIJA II === -->
+            <div data-aos="fade-up" data-aos-duration="1000">
+                <div class="gallery-section-label">
+                    <span>Serija II &mdash; Platna</span>
+                    <div class="gallery-section-line"></div>
+                    <div class="gallery-nav">
+                        <button class="gallery-nav-btn cursor-pointer-target" onclick="swiper2.slidePrev()"><i class="fas fa-arrow-left"></i></button>
+                        <button class="gallery-nav-btn cursor-pointer-target" onclick="swiper2.slideNext()"><i class="fas fa-arrow-right"></i></button>
                     </div>
-
-                    <div class="swiper-slide flex flex-col justify-between relative">
-                        <div class="w-full h-[390px] overflow-hidden relative">
-                            <img src="slika12.jpg" alt="Sloboda">
-                            <div class="absolute inset-0 z-10 transparent-shield"></div>
-                        </div>
-                        <div class="pt-3 text-center border-t border-stone-100">
-                            <h4 class="font-normal text-sm text-[#2C2A29] font-serif-art italic">Sloboda</h4>
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide flex flex-col justify-between relative">
-                        <div class="w-full h-[390px] overflow-hidden relative">
-                            <img src="slika13.jpg" alt="Serijal: Dugi brodovi">
-                            <div class="absolute inset-0 z-10 transparent-shield"></div>
-                        </div>
-                        <div class="pt-3 text-center border-t border-stone-100">
-                            <h4 class="font-normal text-sm text-[#2C2A29] font-serif-art italic">Serijal: Dugi brodovi</h4>
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide flex flex-col justify-between relative">
-                        <div class="w-full h-[390px] overflow-hidden relative">
-                            <img src="slika14.jpg" alt="Radila sam tigra lava, ostaje puma">
-                            <div class="absolute inset-0 z-10 transparent-shield"></div>
-                        </div>
-                        <div class="pt-3 text-center border-t border-stone-100">
-                            <h4 class="font-normal text-sm text-[#2C2A29] font-serif-art italic">Radila sam tigra lava, ostaje puma</h4>
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide flex flex-col justify-between relative">
-                        <div class="w-full h-[390px] overflow-hidden relative">
-                            <img src="slika15.jpg" alt="Lastavica">
-                            <div class="absolute inset-0 z-10 transparent-shield"></div>
-                        </div>
-                        <div class="pt-3 text-center border-t border-stone-100">
-                            <h4 class="font-normal text-sm text-[#2C2A29] font-serif-art italic">Lastavica</h4>
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide flex flex-col justify-between relative">
-                        <div class="w-full h-[390px] overflow-hidden relative">
-                            <img src="slika16.jpg" alt="Parfem u zraku">
-                            <div class="absolute inset-0 z-10 transparent-shield"></div>
-                        </div>
-                        <div class="pt-3 text-center border-t border-stone-100">
-                            <h4 class="font-normal text-sm text-[#2C2A29] font-serif-art italic">Parfem u zraku (Aroma samopouzdanja)</h4>
-                        </div>
-                    </div>
-
                 </div>
-                <div class="swiper-pagination sp2"></div>
+                <div class="swiper artSwiper2 cursor-pointer-target">
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide cursor-pointer-target" onclick="openLightbox(this, 'Miris svježeg cvijeća')">
+                            <div class="slide-inner h-mid">
+                                <img src="slika11.jpg" alt="Miris svježeg cvijeća">
+                                <div class="slide-overlay"><span><span class="slide-overlay-num">01</span><span class="slide-overlay-title">Miris svježeg cvijeća</span></span></div>
+                                <div class="absolute inset-0 z-10 transparent-shield"></div>
+                            </div>
+                            <div class="slide-caption"><span class="slide-caption-title">Miris svježeg cvijeća</span><div class="slide-caption-icon"><i class="fas fa-expand"></i></div></div>
+                        </div>
+
+                        <div class="swiper-slide cursor-pointer-target" onclick="openLightbox(this, 'Sloboda')">
+                            <div class="slide-inner h-tall">
+                                <img src="slika12.jpg" alt="Sloboda">
+                                <div class="slide-overlay"><span><span class="slide-overlay-num">02</span><span class="slide-overlay-title">Sloboda</span></span></div>
+                                <div class="absolute inset-0 z-10 transparent-shield"></div>
+                            </div>
+                            <div class="slide-caption"><span class="slide-caption-title">Sloboda</span><div class="slide-caption-icon"><i class="fas fa-expand"></i></div></div>
+                        </div>
+
+                        <div class="swiper-slide cursor-pointer-target" onclick="openLightbox(this, 'Serijal: Dugi brodovi')">
+                            <div class="slide-inner h-short">
+                                <img src="slika13.jpg" alt="Serijal: Dugi brodovi">
+                                <div class="slide-overlay"><span><span class="slide-overlay-num">03</span><span class="slide-overlay-title">Serijal: Dugi brodovi</span></span></div>
+                                <div class="absolute inset-0 z-10 transparent-shield"></div>
+                            </div>
+                            <div class="slide-caption"><span class="slide-caption-title">Serijal: Dugi brodovi</span><div class="slide-caption-icon"><i class="fas fa-expand"></i></div></div>
+                        </div>
+
+                        <div class="swiper-slide cursor-pointer-target" onclick="openLightbox(this, 'Radila sam tigra lava, ostaje puma')">
+                            <div class="slide-inner h-tall">
+                                <img src="slika14.jpg" alt="Radila sam tigra lava, ostaje puma">
+                                <div class="slide-overlay"><span><span class="slide-overlay-num">04</span><span class="slide-overlay-title">Radila sam tigra lava, ostaje puma</span></span></div>
+                                <div class="absolute inset-0 z-10 transparent-shield"></div>
+                            </div>
+                            <div class="slide-caption"><span class="slide-caption-title">Radila sam tigra lava, ostaje puma</span><div class="slide-caption-icon"><i class="fas fa-expand"></i></div></div>
+                        </div>
+
+                        <div class="swiper-slide cursor-pointer-target" onclick="openLightbox(this, 'Lastavica')">
+                            <div class="slide-inner h-mid">
+                                <img src="slika15.jpg" alt="Lastavica">
+                                <div class="slide-overlay"><span><span class="slide-overlay-num">05</span><span class="slide-overlay-title">Lastavica</span></span></div>
+                                <div class="absolute inset-0 z-10 transparent-shield"></div>
+                            </div>
+                            <div class="slide-caption"><span class="slide-caption-title">Lastavica</span><div class="slide-caption-icon"><i class="fas fa-expand"></i></div></div>
+                        </div>
+
+                        <div class="swiper-slide cursor-pointer-target" onclick="openLightbox(this, 'Parfem u zraku')">
+                            <div class="slide-inner h-short">
+                                <img src="slika16.jpg" alt="Parfem u zraku">
+                                <div class="slide-overlay"><span><span class="slide-overlay-num">06</span><span class="slide-overlay-title">Parfem u zraku</span></span></div>
+                                <div class="absolute inset-0 z-10 transparent-shield"></div>
+                            </div>
+                            <div class="slide-caption"><span class="slide-caption-title">Parfem u zraku (Aroma samopouzdanja)</span><div class="slide-caption-icon"><i class="fas fa-expand"></i></div></div>
+                        </div>
+
+                    </div>
+                    <div class="swiper-pagination sp2 mt-6"></div>
+                </div>
             </div>
 
-            <div class="w-16 h-[1px] bg-[#D4AF37]/20 mx-auto my-12" data-aos="fade-up"></div>
+            <div class="w-full h-[1px] bg-gradient-to-r from-transparent via-[#D4AF37]/20 to-transparent my-16" data-aos="fade-up"></div>
 
-            <!-- TREĆI SLIJDER (Novi set s planinskim i atelje radovima) -->
-            <div class="swiper artSwiper3 cursor-pointer-target" data-aos="fade-up" data-aos-duration="1200">
-                <div class="swiper-wrapper">
-                    
-                    <div class="swiper-slide flex flex-col justify-between relative">
-                        <div class="w-full h-[390px] overflow-hidden relative">
-                            <img src="natasa_2.jpg" alt="Ekstaza detalja i vela">
-                            <div class="absolute inset-0 z-10 transparent-shield"></div>
-                        </div>
-                        <div class="pt-3 text-center border-t border-stone-100">
-                            <h4 class="font-normal text-sm text-[#2C2A29] font-serif-art italic">Ekstaza detalja i vela</h4>
-                        </div>
+            <!-- === GALERIJA III === -->
+            <div data-aos="fade-up" data-aos-duration="1000">
+                <div class="gallery-section-label">
+                    <span>Serija III &mdash; Atelje</span>
+                    <div class="gallery-section-line"></div>
+                    <div class="gallery-nav">
+                        <button class="gallery-nav-btn cursor-pointer-target" onclick="swiper3.slidePrev()"><i class="fas fa-arrow-left"></i></button>
+                        <button class="gallery-nav-btn cursor-pointer-target" onclick="swiper3.slideNext()"><i class="fas fa-arrow-right"></i></button>
                     </div>
-
-                    <div class="swiper-slide flex flex-col justify-between relative">
-                        <div class="w-full h-[390px] overflow-hidden relative">
-                            <img src="natasa1_2.jpg" alt="Ples balerina u ateljeu">
-                            <div class="absolute inset-0 z-10 transparent-shield"></div>
-                        </div>
-                        <div class="pt-3 text-center border-t border-stone-100">
-                            <h4 class="font-normal text-sm text-[#2C2A29] font-serif-art italic">Ples balerina u ateljeu</h4>
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide flex flex-col justify-between relative">
-                        <div class="w-full h-[390px] overflow-hidden relative">
-                            <img src="natasa2_2.jpg" alt="Čuvar tajni i golubica">
-                            <div class="absolute inset-0 z-10 transparent-shield"></div>
-                        </div>
-                        <div class="pt-3 text-center border-t border-stone-100">
-                            <h4 class="font-normal text-sm text-[#2C2A29] font-serif-art italic">Čuvar tajni i golubica</h4>
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide flex flex-col justify-between relative">
-                        <div class="w-full h-[390px] overflow-hidden relative">
-                            <img src="natasa3_2.jpg" alt="Procvat i leptir">
-                            <div class="absolute inset-0 z-10 transparent-shield"></div>
-                        </div>
-                        <div class="pt-3 text-center border-t border-stone-100">
-                            <h4 class="font-normal text-sm text-[#2C2A29] font-serif-art italic">Procvat i leptir</h4>
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide flex flex-col justify-between relative">
-                        <div class="w-full h-[390px] overflow-hidden relative">
-                            <img src="natasa4_2.jpg" alt="Povez pravde">
-                            <div class="absolute inset-0 z-10 transparent-shield"></div>
-                        </div>
-                        <div class="pt-3 text-center border-t border-stone-100">
-                            <h4 class="font-normal text-sm text-[#2C2A29] font-serif-art italic">Povez pravde</h4>
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide flex flex-col justify-between relative">
-                        <div class="w-full h-[390px] overflow-hidden relative">
-                            <img src="natasa5_2.jpg" alt="Melankolija plesačice">
-                            <div class="absolute inset-0 z-10 transparent-shield"></div>
-                        </div>
-                        <div class="pt-3 text-center border-t border-stone-100">
-                            <h4 class="font-normal text-sm text-[#2C2A29] font-serif-art italic">Melankolija plesačice</h4>
-                        </div>
-                    </div>
-
                 </div>
-                <div class="swiper-pagination sp3"></div>
+                <div class="swiper artSwiper3 cursor-pointer-target">
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide cursor-pointer-target" onclick="openLightbox(this, 'Ekstaza detalja i vela')">
+                            <div class="slide-inner h-tall">
+                                <img src="natasa.jpg" alt="Ekstaza detalja i vela">
+                                <div class="slide-overlay"><span><span class="slide-overlay-num">01</span><span class="slide-overlay-title">Ekstaza detalja i vela</span></span></div>
+                                <div class="absolute inset-0 z-10 transparent-shield"></div>
+                            </div>
+                            <div class="slide-caption"><span class="slide-caption-title">Ekstaza detalja i vela</span><div class="slide-caption-icon"><i class="fas fa-expand"></i></div></div>
+                        </div>
+
+                        <div class="swiper-slide cursor-pointer-target" onclick="openLightbox(this, 'Ples balerina u ateljeu')">
+                            <div class="slide-inner h-short">
+                                <img src="natasa1.jpg" alt="Ples balerina u ateljeu">
+                                <div class="slide-overlay"><span><span class="slide-overlay-num">02</span><span class="slide-overlay-title">Ples balerina u ateljeu</span></span></div>
+                                <div class="absolute inset-0 z-10 transparent-shield"></div>
+                            </div>
+                            <div class="slide-caption"><span class="slide-caption-title">Ples balerina u ateljeu</span><div class="slide-caption-icon"><i class="fas fa-expand"></i></div></div>
+                        </div>
+
+                        <div class="swiper-slide cursor-pointer-target" onclick="openLightbox(this, 'Čuvar tajni i golubica')">
+                            <div class="slide-inner h-mid">
+                                <img src="natasa2.jpg" alt="Čuvar tajni i golubica">
+                                <div class="slide-overlay"><span><span class="slide-overlay-num">03</span><span class="slide-overlay-title">Čuvar tajni i golubica</span></span></div>
+                                <div class="absolute inset-0 z-10 transparent-shield"></div>
+                            </div>
+                            <div class="slide-caption"><span class="slide-caption-title">Čuvar tajni i golubica</span><div class="slide-caption-icon"><i class="fas fa-expand"></i></div></div>
+                        </div>
+
+                        <div class="swiper-slide cursor-pointer-target" onclick="openLightbox(this, 'Procvat i leptir')">
+                            <div class="slide-inner h-tall">
+                                <img src="natasa3.jpg" alt="Procvat i leptir">
+                                <div class="slide-overlay"><span><span class="slide-overlay-num">04</span><span class="slide-overlay-title">Procvat i leptir</span></span></div>
+                                <div class="absolute inset-0 z-10 transparent-shield"></div>
+                            </div>
+                            <div class="slide-caption"><span class="slide-caption-title">Procvat i leptir</span><div class="slide-caption-icon"><i class="fas fa-expand"></i></div></div>
+                        </div>
+
+                        <div class="swiper-slide cursor-pointer-target" onclick="openLightbox(this, 'Povez pravde')">
+                            <div class="slide-inner h-short">
+                                <img src="natasa4.jpg" alt="Povez pravde">
+                                <div class="slide-overlay"><span><span class="slide-overlay-num">05</span><span class="slide-overlay-title">Povez pravde</span></span></div>
+                                <div class="absolute inset-0 z-10 transparent-shield"></div>
+                            </div>
+                            <div class="slide-caption"><span class="slide-caption-title">Povez pravde</span><div class="slide-caption-icon"><i class="fas fa-expand"></i></div></div>
+                        </div>
+
+                        <div class="swiper-slide cursor-pointer-target" onclick="openLightbox(this, 'Melankolija plesačice')">
+                            <div class="slide-inner h-mid">
+                                <img src="natasa5.jpg" alt="Melankolija plesačice">
+                                <div class="slide-overlay"><span><span class="slide-overlay-num">06</span><span class="slide-overlay-title">Melankolija plesačice</span></span></div>
+                                <div class="absolute inset-0 z-10 transparent-shield"></div>
+                            </div>
+                            <div class="slide-caption"><span class="slide-caption-title">Melankolija plesačice</span><div class="slide-caption-icon"><i class="fas fa-expand"></i></div></div>
+                        </div>
+
+                    </div>
+                    <div class="swiper-pagination sp3 mt-6"></div>
+                </div>
             </div>
 
         </div>
@@ -614,39 +1010,115 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     
     <script>
+        // SCROLL PROGRESS BAR
+        const scrollProgress = document.getElementById('scroll-progress');
+        window.addEventListener('scroll', () => {
+            const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+            const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const pct = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
+            scrollProgress.style.width = pct + '%';
+        });
+
+        // PAGE LOADER
+        const loader = document.getElementById('page-loader');
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                loader.classList.add('hidden');
+            }, 1500);
+        });
+
         AOS.init({ once: true, offset: 80 });
 
         var swiper1 = new Swiper(".artSwiper1", {
-            effect: "coverflow",
             grabCursor: true,
-            centeredSlides: true,
             slidesPerView: "auto",
-            coverflowEffect: { rotate: 3, stretch: -10, depth: 50, modifier: 1.2, slideShadows: false },
+            spaceBetween: 20,
             pagination: { el: ".sp1", clickable: true },
             loop: true,
             autoplay: { delay: 4500, disableOnInteraction: false }
         });
 
         var swiper2 = new Swiper(".artSwiper2", {
-            effect: "coverflow",
             grabCursor: true,
-            centeredSlides: true,
             slidesPerView: "auto",
-            coverflowEffect: { rotate: 3, stretch: -10, depth: 50, modifier: 1.2, slideShadows: false },
+            spaceBetween: 20,
             pagination: { el: ".sp2", clickable: true },
             loop: true,
             autoplay: { delay: 5000, disableOnInteraction: false }
         });
 
         var swiper3 = new Swiper(".artSwiper3", {
-            effect: "coverflow",
             grabCursor: true,
-            centeredSlides: true,
             slidesPerView: "auto",
-            coverflowEffect: { rotate: 3, stretch: -10, depth: 50, modifier: 1.2, slideShadows: false },
+            spaceBetween: 20,
             pagination: { el: ".sp3", clickable: true },
             loop: true,
             autoplay: { delay: 5500, disableOnInteraction: false }
+        });
+
+        // === LIGHTBOX ===
+        let allSlides = [];
+        let currentLightboxIndex = 0;
+
+        function buildSlideRegistry() {
+            allSlides = [];
+            document.querySelectorAll('.swiper-slide:not(.swiper-slide-duplicate)').forEach(slide => {
+                const img = slide.querySelector('img');
+                const caption = slide.querySelector('.slide-caption-title');
+                if (img && caption) {
+                    allSlides.push({ src: img.src, caption: caption.textContent.trim() });
+                }
+            });
+        }
+
+        function openLightbox(slideEl, caption) {
+            const img = slideEl.querySelector('img');
+            if (!img) return;
+            buildSlideRegistry();
+            // Find index
+            const src = img.src;
+            const idx = allSlides.findIndex(s => s.src === src && s.caption === caption);
+            currentLightboxIndex = idx >= 0 ? idx : 0;
+            showLightboxAt(currentLightboxIndex);
+            document.getElementById('lightbox').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function showLightboxAt(idx) {
+            if (allSlides.length === 0) return;
+            const item = allSlides[idx];
+            document.getElementById('lightbox-img').src = item.src;
+            document.getElementById('lightbox-caption').textContent = item.caption;
+        }
+
+        document.getElementById('lightbox-close').addEventListener('click', () => {
+            document.getElementById('lightbox').classList.remove('active');
+            document.body.style.overflow = '';
+        });
+        document.getElementById('lightbox').addEventListener('click', (e) => {
+            if (e.target === document.getElementById('lightbox')) {
+                document.getElementById('lightbox').classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+        document.getElementById('lightbox-prev').addEventListener('click', (e) => {
+            e.stopPropagation();
+            buildSlideRegistry();
+            currentLightboxIndex = (currentLightboxIndex - 1 + allSlides.length) % allSlides.length;
+            showLightboxAt(currentLightboxIndex);
+        });
+        document.getElementById('lightbox-next').addEventListener('click', (e) => {
+            e.stopPropagation();
+            buildSlideRegistry();
+            currentLightboxIndex = (currentLightboxIndex + 1) % allSlides.length;
+            showLightboxAt(currentLightboxIndex);
+        });
+        document.addEventListener('keydown', (e) => {
+            const lb = document.getElementById('lightbox');
+            if (!lb.classList.contains('active')) return;
+            if (e.key === 'Escape') { lb.classList.remove('active'); document.body.style.overflow = ''; }
+            if (e.key === 'ArrowLeft') { buildSlideRegistry(); currentLightboxIndex = (currentLightboxIndex - 1 + allSlides.length) % allSlides.length; showLightboxAt(currentLightboxIndex); }
+            if (e.key === 'ArrowRight') { buildSlideRegistry(); currentLightboxIndex = (currentLightboxIndex + 1) % allSlides.length; showLightboxAt(currentLightboxIndex); }
         });
 
         // KURSOR TRACER SKRIPTA
