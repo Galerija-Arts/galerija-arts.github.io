@@ -7,26 +7,20 @@
     <meta name="description" content="Službeni portfolio akademske slikarice i ilustratorice Nataše Stević. Otkrijte bajkovite ilustracije, monumentalne murale i priču iz šumskog ateljea na Romaniji.">
     <meta name="author" content="Kezić Vizuali">
     
-    <!-- Open Graph / Facebook / Instagram dijeljenje linka -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://galerija-arts.github.io/">
     <meta property="og:title" content="Galerija ArtS | Nataša Stević">
     <meta property="og:description" content="Umjetnost inspirirana prirodom, tišinom planine i djetetom u nama.">
     <meta property="og:image" content="slika10.jpg">
 
-    <!-- Google Fonts: Playfair Display za umjetničke naslove i Inter za tekst -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     
-    <!-- Tailwind CSS (Isto kao na Royal Ridesu) -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Swiper.js CSS za premium 3D slajd galeriju -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     
-    <!-- FontAwesome za ikone -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- AOS (Animate On Scroll) CSS za animacije ulijetanja -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
     <style>
@@ -91,7 +85,6 @@
 </head>
 <body class="antialiased selection:bg-[#F4EFE6] selection:text-[#2C2A29]">
 
-    <!-- NAVBAR -->
     <nav class="fixed w-full z-50 bg-[#FDFBF7]/90 backdrop-blur-xl border-b border-stone-200/50 flex justify-between items-center py-5 px-6 md:px-16 transition-all duration-300">
         <a href="#pocetna" class="text-xl md:text-2xl font-semibold tracking-wide font-serif-art">
             Galerija <span class="text-[#D4AF37]">ArtS</span>
@@ -106,7 +99,6 @@
         </div>
     </nav>
 
-    <!-- HERO SECTION -->
     <section id="pocetna" class="h-screen flex items-center hero-art-bg px-6 md:px-16 relative overflow-hidden">
         <div class="max-w-4xl" data-aos="fade-up" data-aos-duration="1500">
             <span class="text-[#D4AF37] uppercase tracking-[0.35em] font-semibold text-xs block mb-5">ILUSTRACIJA &bull; MURALI &bull; SNOVI NA PLATNU</span>
@@ -129,7 +121,6 @@
         </div>
     </section>
 
-    <!-- SEKCIJA: PRIČA S ROMANIJE -->
     <section id="priča" class="py-32 md:py-44 bg-[#FDFBF7] px-6 md:px-16 overflow-hidden">
         <div class="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-16 md:gap-24">
             <div class="lg:w-1/2" data-aos="fade-right" data-aos-duration="1200">
@@ -150,7 +141,6 @@
         </div>
     </section>
 
-    <!-- POSEBNA CENTRALNA SEKCIJA: SLIKA KOJU NIKADA NEĆU PRODATI -->
     <section id="svjetlost" class="py-32 bg-white px-6 md:px-16 border-t border-b border-stone-200/40 relative overflow-hidden">
         <div class="max-w-6xl mx-auto flex flex-col lg:flex-row-reverse items-center gap-16 md:gap-24">
             
@@ -181,7 +171,6 @@
         </div>
     </section>
 
-    <!-- PREMIUM SLIJARSKI 3D SLIDER (Zamijenio stari grid) -->
     <section id="galerija" class="py-32 bg-accent-soft px-6 md:px-16 overflow-hidden">
         <div class="max-w-6xl mx-auto">
             
@@ -191,11 +180,9 @@
                 <div class="h-[1px] w-12 bg-[#D4AF37]/50 mx-auto mt-6"></div>
             </div>
 
-            <!-- Swiper klizač s Coverflow 3D efektom kvačice iz Royal Ridesa, krojeno za slikare -->
             <div class="swiper artSwiper" data-aos="fade-up" data-aos-duration="1200">
                 <div class="swiper-wrapper">
                     
-                    <!-- Slada 1: slika.jpg -->
                     <div class="swiper-slide flex flex-col justify-between">
                         <div class="w-full h-[390px] overflow-hidden">
                             <img src="slika.jpg" alt="Umjetnički rad - slika.jpg">
@@ -205,7 +192,6 @@
                         </div>
                     </div>
 
-                    <!-- Slada 2: slika1.jpg -->
                     <div class="swiper-slide flex flex-col justify-between">
                         <div class="w-full h-[390px] overflow-hidden">
                             <img src="slika1.jpg" alt="Umjetnički rad - slika1.jpg">
@@ -215,27 +201,24 @@
                         </div>
                     </div>
 
-                    <!-- Slada 3: slika2.jpg -->
                     <div class="swiper-slide flex flex-col justify-between">
                         <div class="w-full h-[390px] overflow-hidden">
-                            <img src="slika2.jpg" alt="Umjetnički rad - slika2.jpg">
+                            <img src="slika2.jpg" alt="Umjetnički rad - Korak kroz snove">
                         </div>
                         <div class="pt-3 text-center border-t border-stone-100/60">
-                            <h4 class="font-normal text-base text-[#2C2A29] font-serif-art italic">Balerina na užetu</h4>
+                            <h4 class="font-normal text-base text-[#2C2A29] font-serif-art italic">Korak kroz snove</h4>
                         </div>
                     </div>
 
-                    <!-- Slada 4: slika3.jpg -->
                     <div class="swiper-slide flex flex-col justify-between">
                         <div class="w-full h-[390px] overflow-hidden">
-                            <img src="slika3.jpg" alt="Umjetnički rad - slika3.jpg">
+                            <img src="slika3.jpg" alt="Umjetnički rad - Između prošlosti i sadašnjosti">
                         </div>
                         <div class="pt-3 text-center border-t border-stone-100/60">
-                            <h4 class="font-normal text-base text-[#2C2A29] font-serif-art italic">Dama s lepezom</h4>
+                            <h4 class="font-normal text-base text-[#2C2A29] font-serif-art italic">Između prošlosti i sadašnjosti</h4>
                         </div>
                     </div>
 
-                    <!-- Slada 5: slika4.jpg -->
                     <div class="swiper-slide flex flex-col justify-between">
                         <div class="w-full h-[390px] overflow-hidden">
                             <img src="slika4.jpg" alt="Umjetnički rad - slika4.jpg">
@@ -245,7 +228,6 @@
                         </div>
                     </div>
 
-                    <!-- Slada 6: slika5.jpg -->
                     <div class="swiper-slide flex flex-col justify-between">
                         <div class="w-full h-[390px] overflow-hidden">
                             <img src="slika5.jpg" alt="Umjetnički rad - slika5.jpg">
@@ -255,34 +237,30 @@
                         </div>
                     </div>
 
-                    <!-- Slada 7: slika6.jpg -->
                     <div class="swiper-slide flex flex-col justify-between">
                         <div class="w-full h-[390px] overflow-hidden">
-                            <img src="slika6.jpg" alt="Umjetnički rad - slika6.jpg">
+                            <img src="slika6.jpg" alt="Umjetnički rad - Inspiracija, Romanija">
                         </div>
                         <div class="pt-3 text-center border-t border-stone-100/60">
-                            <h4 class="font-normal text-base text-[#2C2A29] font-serif-art italic">Ponosni jelen</h4>
+                            <h4 class="font-normal text-base text-[#2C2A29] font-serif-art italic">Inspiracija, Romanija</h4>
                         </div>
                     </div>
 
-                    <!-- Slada 8: slika7.jpg -->
                     <div class="swiper-slide flex flex-col justify-between">
                         <div class="w-full h-[390px] overflow-hidden">
-                            <img src="slika7.jpg" alt="Umjetnički rad - slika7.jpg">
+                            <img src="slika7.jpg" alt="Umjetnički rad - Acutus sensus">
                         </div>
                         <div class="pt-3 text-center border-t border-stone-100/60">
-                            <h4 class="font-normal text-base text-[#2C2A29] font-serif-art italic">Povez od svile</h4>
+                            <h4 class="font-normal text-base text-[#2C2A29] font-serif-art italic">Acutus sensus</h4>
                         </div>
                     </div>
 
                 </div>
-                <!-- Tanke elegantne točkice na dnu -->
                 <div class="swiper-pagination"></div>
             </div>
         </div>
     </section>
 
-    <!-- SEKCIJA: FILOZOFIJA -->
     <section id="filozofija" class="py-36 bg-[#FDFBF7] px-6 md:px-16 relative overflow-hidden">
         <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[26rem] text-stone-200/30 pointer-events-none select-none font-serif-art">“</div>
         <div class="max-w-3xl mx-auto text-center relative z-10" data-aos="fade-up" data-aos-duration="1400">
@@ -297,7 +275,6 @@
         </div>
     </section>
 
-    <!-- SEKCIJA: KONTAKT -->
     <section id="kontakt" class="py-32 bg-white px-6 md:px-16 border-t border-stone-200/50">
         <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 md:gap-24">
             
@@ -355,7 +332,6 @@
         </div>
     </section>
 
-    <!-- FOOTER -->
     <footer class="py-12 bg-[#2C2A29] text-center text-[10px] tracking-[0.25em] uppercase text-stone-400">
         <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row justify-between items-center gap-4">
             <p>&copy; 2026 GALERIJA ARTS. SVA PRAVA PRIDRŽANA.</p>
@@ -368,10 +344,8 @@
         </div>
     </footer>
 
-    <!-- Swiper.js Skripta za funkcionalnost klizača -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-    <!-- AOS (Animate On Scroll) Skripta -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     
     <script>
