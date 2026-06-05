@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galerija ArtS | Nataša Konjević</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="logo">
+            <a href="#">Galerija <span>ArtS</span></a>
+        </div>
+        <nav class="nav-links">
+            <a href="#priča">O meni</a>
+            <a href="#galerija">Radovi</a>
+            <a href="#filozofija">Filozofija</a>
+            <a href="#kontakt">Kontakt</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="hero-content">
+                <p class="hero-subtitle">Umjetnost inspirirana prirodom i maštom</p>
+                <h1 class="hero-title">Svaki rad je prozor u <br><span>jedan bajkoviti svijet</span></h1>
+                <a href="#galerija" class="btn-primary">Istraži galeriju <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="scroll-down">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </section>
+
+        <section id="priča" class="about-section">
+            <div class="container grid-2">
+                <div class="about-text">
+                    <span class="section-tag">Upoznajte umjetnicu</span>
+                    <h2>Povratak prirodi i slobodi stvaranja</h2>
+                    <p>Nataša Konjević je akademska slikarica koja je gradsku vrevu zamijenila tišinom i inspiracijom planine Romanije.</p>
+                    <p>U svom ručno stvorenom ateljeu, okružena šumom, ona oživljava čarobne ilustracije, murale i platna koja pričaju priče o slobodi, toplini i magiji svakodnevnog života.</p>
+                </div>
+                <div class="about-image">
+                    <div class="img-frame">
+                        <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?q=80&w=600&auto=format&fit=crop" alt="Umjetnost placeholder">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="galerija" class="gallery-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Portfolio</span>
+                    <h2>Odabrani Radovi</h2>
+                </div>
+                
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1579783928621-7a13d66a62d1?q=80&w=500&auto=format&fit=crop" alt="Ilustracija 1">
+                        <div class="item-overlay">
+                            <h3>Naziv Radova 1</h3>
+                            <p>Ilustracija / Akril</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1580136579312-94651dfd596d?q=80&w=500&auto=format&fit=crop" alt="Mural 1">
+                        <div class="item-overlay">
+                            <h3>Zidno slikarstvo (Mural)</h3>
+                            <p>Projekti na otvorenom</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1605721911519-3dfeb3be25e7?q=80&w=500&auto=format&fit=crop" alt="Ilustracija 2">
+                        <div class="item-overlay">
+                            <h3>Naziv Radova 2</h3>
+                            <p>Digitalna ilustracija</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1541701494587-cb58502866ab?q=80&w=500&auto=format&fit=crop" alt="Rad na platnu">
+                        <div class="item-overlay">
+                            <h3>Snovi na platnu</h3>
+                            <p>Ulje na platnu</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="filozofija" class="quote-section">
+            <div class="container-small">
+                <i class="fas fa-quote-left quote-icon"></i>
+                <blockquote>
+                    "Moramo zagrliti dijete u sebi da bismo razumjeli odraslu osobu koja nas gleda u ogledalu."
+                </blockquote>
+                <cite>— Nataša Konjević, ArtS</cite>
+            </div>
+        </section>
+
+        <section id="kontakt" class="contact-section">
+            <div class="container grid-2">
+                <div class="contact-info">
+                    <span class="section-tag">Ostanimo u kontaktu</span>
+                    <h2>Želite suradnju ili unikatni rad?</h2>
+                    <p>Otvorena sam za zanimljive projekte, ilustriranje knjiga, izradu murala i privatne narudžbe. Javite se slobodno s vašom idejom.</p>
+                    
+                    <div class="social-links">
+                        <a href="#" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+                        <a href="#" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a>
+                        <a href="mailto:natasa@example.com"><i class="fas fa-envelope"></i> natasa@arts.com</a>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper">
+                    <form class="contact-form">
+                        <input type="text" placeholder="Vaše ime" required>
+                        <input type="email" placeholder="Vaš E-mail" required>
+                        <textarea placeholder="Vaša poruka ili ideja za projekt..." rows="5" required></textarea>
+                        <button type="submit" class="btn-primary">Pošalji poruku</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2026 Galerija ArtS. Crafted with <i class="fas fa-heart"></i> by Kezić Vizuali.</p>
+    </footer>
+
+</body>
+</html>
