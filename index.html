@@ -1,18 +1,21 @@
 <!DOCTYPE html>
-<html lang="hr" class="scroll-smooth">
+<html lang="bs" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galerija ArtS | Nataša Stević – Umjetnost s Romanije</title>
-    <meta name="description" content="Službeni portfolio akademske slikarice Nataše Stević. Unikatne umjetničke slike iz šumskog ateljea na Romaniji. Isporuka diljem BiH i regije.">
+    <title id="page-title">Galerija ArtS | Nataša Stević – Umjetnost s Romanije</title>
+    <meta name="description" id="meta-desc" content="Službeni portfolio akademske slikarice Nataše Stević. Unikatne umjetničke slike iz šumskog ateljea na Romaniji. Isporuka diljem BiH i regije.">
+    <meta name="keywords" content="Nataša Stević, slikarica, akademska slikarica, umjetnost, slike na platnu, Romanija, galerija ArtS, prodaja slika, unikatne slike, šumski atelje, slikarstvo BiH">
     <meta name="author" content="Kezić Vizuali">
+    <meta name="robots" content="index, follow">
     
     <!-- Open Graph / Facebook / Instagram -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://galerija-arts.github.io/">
-    <meta property="og:title" content="Galerija ArtS | Nataša Stević">
-    <meta property="og:description" content="Umjetnost inspirirana prirodom, tišinom planine i djetetom u nama.">
+    <meta property="og:title" id="og-title" content="Galerija ArtS | Nataša Stević">
+    <meta property="og:description" id="og-desc" content="Umjetnost inspirirana prirodom, tišinom planine i djetetom u nama.">
     <meta property="og:image" content="slika10.jpg">
+    <meta property="og:locale" id="og-locale" content="bs_BA">
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="logo.png">
@@ -115,8 +118,6 @@
         }
 
         /* GALERIJA - ULTRA MODERNI DIZAJN */
-
-        /* Swiper ostaje ali s upgradeanim izgledom */
         .swiper { width: 100%; padding-top: 10px; padding-bottom: 50px; }
         .swiper-slide { 
             width: 320px;
@@ -250,7 +251,7 @@
             background: rgba(44,42,41,0.08);
         }
 
-        /* SLIDE VISINE - raznolike za dinamičnost */
+        /* SLIDE VISINE */
         .h-short { height: 340px; }
         .h-tall   { height: 460px; }
         .h-mid    { height: 400px; }
@@ -325,13 +326,6 @@
             color: #D4AF37;
         }
 
-        /* Pozadina bez img/ mape */
-        .hero-bg { 
-            background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.98)), url('hero.jpg'); 
-            background-size: cover; 
-            background-position: center; 
-        }
-
         /* ZABRANA SELEKCIJE I PREUZIMANJA NA RAZINI KODA */
         img {
             -webkit-user-select: none;
@@ -342,7 +336,6 @@
             pointer-events: none;
         }
 
-        /* Stil za umjetničko vertikalno okretanje natpisa na bokovima */
         .vertical-text {
             writing-mode: vertical-rl;
             text-transform: uppercase;
@@ -482,7 +475,7 @@
 
     <!-- PAGE LOADER -->
     <div id="page-loader">
-        <span class="loader-text">Galerija ArtS &nbsp;&bull;&nbsp; Nataša Stević</span>
+        <span class="loader-text" data-bs="Galerija ArtS &nbsp;&bull;&nbsp; Nataša Stević" data-en="ArtS Gallery &nbsp;&bull;&nbsp; Nataša Stević">Galerija ArtS &nbsp;&bull;&nbsp; Nataša Stević</span>
         <div class="loader-line"></div>
     </div>
 
@@ -491,24 +484,30 @@
     <div id="cursor-aura" class="custom-cursor-aura hidden lg:block"></div>
 
     <!-- NAVBAR -->
-    <nav class="fixed w-full z-50 bg-[#FDFBF7]/80 backdrop-blur-xl border-b border-stone-200/30 flex justify-between items-center py-4 px-6 md:px-16 duration-300">
+    <nav class="fixed w-full z-50 bg-[#FDFBF7]/90 backdrop-blur-xl border-b border-stone-200/30 flex justify-between items-center py-4 px-6 md:px-16 duration-300">
         <a href="tel:+38766004531" class="cursor-pointer-target flex items-center gap-2 text-stone-500 hover:text-[#D4AF37] transition-colors duration-300">
             <i class="fas fa-phone text-[#D4AF37] text-[10px]"></i>
             <span class="text-[11px] tracking-[0.15em] font-light">+387 66 004 531</span>
         </a>
         
         <div class="space-x-8 hidden lg:flex items-center text-[10px] uppercase tracking-[0.25em] font-medium">
-            <a href="#priča" class="nav-link-effect text-stone-600 hover:text-[#D4AF37] cursor-pointer-target">Umjetnica</a>
-            <a href="#svjetlost" class="nav-link-effect text-stone-600 hover:text-[#D4AF37] cursor-pointer-target">Fokus</a>
-            <a href="#galerija" class="nav-link-effect text-stone-600 hover:text-[#D4AF37] cursor-pointer-target">Kolekcija</a>
-            <a href="#kontakt" class="nav-link-effect text-stone-600 hover:text-[#D4AF37] cursor-pointer-target">Kontakt</a>
+            <a href="#priča" class="nav-link-effect text-stone-600 hover:text-[#D4AF37] cursor-pointer-target" data-bs="Umjetnica" data-en="Artist">Umjetnica</a>
+            <a href="#svjetlost" class="nav-link-effect text-stone-600 hover:text-[#D4AF37] cursor-pointer-target" data-bs="Fokus" data-en="Focus">Fokus</a>
+            <a href="#galerija" class="nav-link-effect text-stone-600 hover:text-[#D4AF37] cursor-pointer-target" data-bs="Kolekcija" data-en="Collection">Kolekcija</a>
+            <a href="#kontakt" class="nav-link-effect text-stone-600 hover:text-[#D4AF37] cursor-pointer-target" data-bs="Kontakt" data-en="Contact">Kontakt</a>
+            
+            <!-- Language Switcher -->
+            <div class="flex items-center gap-3 ml-4 pl-4 border-l border-stone-300/60">
+                <button id="btn-bs" onclick="setLanguage('bs')" class="text-[10px] tracking-[0.25em] uppercase font-semibold transition-colors duration-300 cursor-pointer-target text-[#D4AF37]">BS</button>
+                <span class="text-stone-300 text-[10px] font-light">/</span>
+                <button id="btn-en" onclick="setLanguage('en')" class="text-[10px] tracking-[0.25em] uppercase font-semibold transition-colors duration-300 cursor-pointer-target text-stone-400 hover:text-[#D4AF37]">EN</button>
+            </div>
         </div>
     </nav>
 
-    <!-- HERO SECTION (S umjetničkim bočnim ikonama i poveznicama) -->
+    <!-- HERO SECTION -->
     <section id="pocetna" class="relative pt-32 pb-20 md:pt-40 md:pb-28 bg-[#FDFBF7] px-6 md:px-16 border-b border-stone-200/20 overflow-hidden">
         
-        <!-- LIJEVA GALERIJSKA BOČNA VEZA (FACEBOOK) -->
         <div class="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 hidden sm:flex flex-col items-center gap-5 z-20" data-aos="fade-right" data-aos-duration="1500">
             <div class="w-[1px] h-16 bg-gradient-to-b from-transparent to-stone-300"></div>
             <a href="https://www.facebook.com/hippo911art" target="_blank" class="text-stone-400 hover:text-[#D4AF37] transition-colors duration-300 text-xl font-medium cursor-pointer-target">
@@ -518,7 +517,6 @@
             <div class="w-[1px] h-16 bg-gradient-to-t from-transparent to-stone-300"></div>
         </div>
 
-        <!-- DESNA GALERIJSKA BOČNA VEZA (INSTAGRAM) -->
         <div class="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 hidden sm:flex flex-col items-center gap-5 z-20" data-aos="fade-left" data-aos-duration="1500">
             <div class="w-[1px] h-16 bg-gradient-to-b from-transparent to-stone-300"></div>
             <a href="https://www.instagram.com/_galerija.arts/" target="_blank" class="text-stone-400 hover:text-[#D4AF37] transition-colors duration-300 text-xl font-medium cursor-pointer-target">
@@ -531,24 +529,23 @@
         <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             
             <div class="lg:col-span-7 space-y-8" data-aos="fade-up" data-aos-duration="1200">
-                <!-- Povećan logo na maksimalnu elegantnu razinu (h-36 do h-44) -->
                 <div class="inline-block cursor-pointer-target -ml-4 md:-ml-6 select-none">
                     <img src="logo.png" class="h-36 md:h-44 w-auto object-contain transition-transform duration-300 hover:scale-[1.02]" alt="Galerija ArtS Veliki Logo">
                 </div>
 
                 <div class="space-y-4">
-                    <span class="text-[#D4AF37] uppercase tracking-[0.4em] font-semibold text-[10px] block">ŠUMSKI ATELJE &bull; PLANINA ROMANIJA</span>
-                    <h1 class="text-4xl md:text-5xl font-normal text-[#2C2A29] leading-[1.2] tracking-tight">
+                    <span class="text-[#D4AF37] uppercase tracking-[0.4em] font-semibold text-[10px] block" data-bs="ŠUMSKI ATELJE &bull; PLANINA ROMANIJA" data-en="FOREST STUDIO &bull; MOUNT ROMANIJA">ŠUMSKI ATELJE &bull; PLANINA ROMANIJA</span>
+                    <h1 class="text-4xl md:text-5xl font-normal text-[#2C2A29] leading-[1.2] tracking-tight" data-bs="Gdje snovi i priroda<br><span class='font-normal italic text-stone-400 font-serif-art lowercase'>postaju platno.</span>" data-en="Where dreams and nature<br><span class='font-normal italic text-stone-400 font-serif-art lowercase'>become a canvas.</span>">
                         Gdje snovi i priroda<br>
                         <span class="font-normal italic text-stone-400 font-serif-art lowercase">postaju platno.</span>
                     </h1>
                 </div>
                 
-                <p class="text-stone-500 text-sm font-light max-w-lg leading-relaxed tracking-wide">
+                <p class="text-stone-500 text-sm font-light max-w-lg leading-relaxed tracking-wide" data-bs="Službeni portfolio i digitalni arhiv akademske slikarice Nataše Stević. Autentična umjetnost stvorena u tišini planinskih prostranstava." data-en="Official portfolio and digital archive of academic painter Nataša Stević. Authentic art created in the silence of mountain expanses.">
                     Službeni portfolio i digitalni arhiv akademske slikarice Nataše Stević. Autentična umjetnost stvorena u tišini planinskih prostranstava.
                 </p>
                 <div class="pt-2">
-                    <a href="#galerija" class="inline-block border-b border-[#2C2A29] pb-2 text-xs font-medium uppercase tracking-[0.2em] text-[#2C2A29] hover:text-[#D4AF37] hover:border-[#D4AF37] transition-colors duration-300 cursor-pointer-target">
+                    <a href="#galerija" class="inline-block border-b border-[#2C2A29] pb-2 text-xs font-medium uppercase tracking-[0.2em] text-[#2C2A29] hover:text-[#D4AF37] hover:border-[#D4AF37] transition-colors duration-300 cursor-pointer-target" data-bs="Otvori izložbu <i class='fas fa-chevron-right ml-2 text-[9px]'></i>" data-en="Open exhibition <i class='fas fa-chevron-right ml-2 text-[9px]'></i>">
                         Otvori izložbu <i class="fas fa-chevron-right ml-2 text-[9px]"></i>
                     </a>
                 </div>
@@ -557,7 +554,6 @@
             <div class="lg:col-span-5 w-full flex justify-end" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="200">
                 <div class="gallery-frame w-full max-w-[340px] shadow-lg relative">
                     <img src="slika5.jpg" class="w-full h-[380px] object-cover grayscale-[10%] hover:grayscale-0 transition-all duration-700" alt="ArtS Teaser">
-                    <!-- Nevidljivi štit -->
                     <div class="absolute inset-0 z-10 transparent-shield"></div>
                 </div>
             </div>
@@ -565,44 +561,43 @@
         </div>
     </section>
 
-    <!-- MARQUEE TICKER - EDITORIAL BOLD -->
+    <!-- MARQUEE TICKER -->
     <div class="marquee-wrapper">
         <div class="marquee-track">
             <span class="marquee-item">
-                <span class="marquee-word">Akademska Slikarica</span>
+                <span class="marquee-word" data-bs="Akademska Slikarica" data-en="Academic Painter">Akademska Slikarica</span>
                 <span class="marquee-divider">—</span>
                 <span class="marquee-word italic-gold">Romanija</span>
                 <span class="marquee-divider">—</span>
-                <span class="marquee-word">Šumski Atelje</span>
+                <span class="marquee-word" data-bs="Šumski Atelje" data-en="Forest Studio">Šumski Atelje</span>
                 <span class="marquee-divider">—</span>
-                <span class="marquee-word italic-gold">Unikatne Slike</span>
+                <span class="marquee-word italic-gold" data-bs="Unikatne Slike" data-en="Unique Paintings">Unikatne Slike</span>
                 <span class="marquee-divider">—</span>
-                <span class="marquee-word">Galerija ArtS</span>
+                <span class="marquee-word" data-bs="Galerija ArtS" data-en="ArtS Gallery">Galerija ArtS</span>
                 <span class="marquee-divider">—</span>
-                <span class="marquee-word italic-gold">Isporuka BiH i Regija</span>
+                <span class="marquee-word italic-gold" data-bs="Isporuka BiH i Regija" data-en="Delivery B&H and Region">Isporuka BiH i Regija</span>
                 <span class="marquee-divider">—</span>
-                <span class="marquee-word">Radovi na Platnu</span>
+                <span class="marquee-word" data-bs="Radovi na Platnu" data-en="Canvas Artworks">Radovi na Platnu</span>
                 <span class="marquee-divider">—</span>
-                <span class="marquee-word italic-gold">Po Narudžbi</span>
+                <span class="marquee-word italic-gold" data-bs="Po Narudžbi" data-en="Custom Orders">Po Narudžbi</span>
                 <span class="marquee-divider">—</span>
             </span>
-            <!-- Duplikat za beskonačnu petlju -->
             <span class="marquee-item">
-                <span class="marquee-word">Akademska Slikarica</span>
+                <span class="marquee-word" data-bs="Akademska Slikarica" data-en="Academic Painter">Akademska Slikarica</span>
                 <span class="marquee-divider">—</span>
                 <span class="marquee-word italic-gold">Romanija</span>
                 <span class="marquee-divider">—</span>
-                <span class="marquee-word">Šumski Atelje</span>
+                <span class="marquee-word" data-bs="Šumski Atelje" data-en="Forest Studio">Šumski Atelje</span>
                 <span class="marquee-divider">—</span>
-                <span class="marquee-word italic-gold">Unikatne Slike</span>
+                <span class="marquee-word italic-gold" data-bs="Unikatne Slike" data-en="Unique Paintings">Unikatne Slike</span>
                 <span class="marquee-divider">—</span>
-                <span class="marquee-word">Galerija ArtS</span>
+                <span class="marquee-word" data-bs="Galerija ArtS" data-en="ArtS Gallery">Galerija ArtS</span>
                 <span class="marquee-divider">—</span>
-                <span class="marquee-word italic-gold">Isporuka BiH i Regija</span>
+                <span class="marquee-word italic-gold" data-bs="Isporuka BiH i Regija" data-en="Delivery B&H and Region">Isporuka BiH i Regija</span>
                 <span class="marquee-divider">—</span>
-                <span class="marquee-word">Radovi na Platnu</span>
+                <span class="marquee-word" data-bs="Radovi na Platnu" data-en="Canvas Artworks">Radovi na Platnu</span>
                 <span class="marquee-divider">—</span>
-                <span class="marquee-word italic-gold">Po Narudžbi</span>
+                <span class="marquee-word italic-gold" data-bs="Po Narudžbi" data-en="Custom Orders">Po Narudžbi</span>
                 <span class="marquee-divider">—</span>
             </span>
         </div>
@@ -612,12 +607,12 @@
     <section id="priča" class="py-24 md:py-36 bg-[#FDFBF7] px-6 md:px-16 overflow-hidden">
         <div class="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-16 md:gap-24">
             <div class="lg:w-1/2 space-y-6" data-aos="fade-right" data-aos-duration="1200">
-                <span class="text-[#D4AF37] uppercase tracking-[0.3em] text-[10px] font-semibold block">Koncept i vizija</span>
-                <h2 class="text-3xl md:text-4xl font-normal text-[#2C2A29] leading-tight">Povratak prirodi i<br><span class="italic text-stone-400 font-serif-art lowercase">slobodi stvaranja</span></h2>
+                <span class="text-[#D4AF37] uppercase tracking-[0.3em] text-[10px] font-semibold block" data-bs="Koncept i vizija" data-en="Concept and vision">Koncept i vizija</span>
+                <h2 class="text-3xl md:text-4xl font-normal text-[#2C2A29] leading-tight" data-bs="Povratak prirodi i<br><span class='italic text-stone-400 font-serif-art lowercase'>slobodi stvaranja</span>" data-en="Return to nature and<br><span class='italic text-stone-400 font-serif-art lowercase'>freedom of creation</span>">Povratak prirodi i<br><span class="italic text-stone-400 font-serif-art lowercase">slobodi stvaranja</span></h2>
                 <div class="h-[1px] w-12 bg-[#D4AF37]/40"></div>
                 <div class="space-y-5 text-stone-500 text-sm font-light leading-relaxed tracking-wide">
-                    <p>Nataša Stević je akademska slikarica koja je gradsku vrevu zamijenila tišinom, mirom i nepresušnom inspiracijom čarobne planine Romanije.</p>
-                    <p>U svom ručno stvorenom šumskom ateljeu, daleko od užurbanog ritma modernog društva, ona oživljava neotkrivene svjetove i emocije kroz unikatne slike na platnu koje nose dušu planine i prirode.</p>
+                    <p data-bs="Nataša Stević je akademska slikarica koja je gradsku vrevu zamijenila tišinom, mirom i nepresušnom inspiracijom čarobne planine Romanije." data-en="Nataša Stević is an academic painter who replaced the city bustle with the silence, peace, and endless inspiration of the magical Mount Romanija.">Nataša Stević je akademska slikarica koja je gradsku vrevu zamijenila tišinom, mirom i nepresušnom inspiracijom čarobne planine Romanije.</p>
+                    <p data-bs="U svom ručno stvorenom šumskom ateljeu, daleko od užurbanog ritma modernog društva, ona oživljava neotkrivene svjetove i emocije kroz unikatne slike na platnu koje nose dušu planine i prirode." data-en="In her handcrafted forest studio, far from the hasty rhythm of modern society, she brings undiscovered worlds and emotions to life through unique canvas paintings that carry the soul of the mountain and nature.">U svom ručno stvorenom šumskom ateljeu, daleko od užurbanog ritma modernog društva, ona oživljava neotkrivene svjetove i emocije kroz unikatne slike na platnu koje nose dušu planine i prirode.</p>
                 </div>
             </div>
             <div class="lg:w-1/2 w-full flex items-center justify-center" data-aos="fade-left" data-aos-duration="1200">
@@ -634,16 +629,16 @@
         <div class="max-w-6xl mx-auto flex flex-col lg:flex-row-reverse items-center gap-16 md:gap-24">
             
             <div class="lg:w-1/2 space-y-6" data-aos="fade-left" data-aos-duration="1200">
-                <span class="text-[#D4AF37] uppercase tracking-[0.3em] text-[10px] font-semibold block"><i class="fas fa-star mr-1"></i> Osobna inspiracija</span>
-                <h2 class="text-3xl md:text-4xl font-normal text-[#2C2A29] leading-tight font-serif-art">Slika koju nikada<br><span class="italic text-stone-400 lowercase">neću prodati</span></h2>
+                <span class="text-[#D4AF37] uppercase tracking-[0.3em] text-[10px] font-semibold block" data-bs="<i class='fas fa-star mr-1'></i> Osobna inspiracija" data-en="<i class='fas fa-star mr-1'></i> Personal inspiration"><i class="fas fa-star mr-1"></i> Osobna inspiracija</span>
+                <h2 class="text-3xl md:text-4xl font-normal text-[#2C2A29] leading-tight font-serif-art" data-bs="Slika koju nikada<br><span class='italic text-stone-400 lowercase'>neću prodati</span>" data-en="The painting I will never<br><span class='italic text-stone-400 lowercase'>sell</span>">Slika koju nikada<br><span class="italic text-stone-400 lowercase">neću prodati</span></h2>
                 <div class="h-[1px] w-12 bg-[#D4AF37]/40"></div>
                 
-                <div class="relative bg-[#FDFBF7] p-8 border-l border-[#D4AF37] shadow-sm italic text-stone-600 font-serif-art text-base md:text-lg leading-relaxed">
+                <div class="relative bg-[#FDFBF7] p-8 border-l border-[#D4AF37] shadow-sm italic text-stone-600 font-serif-art text-base md:text-lg leading-relaxed" data-bs="&quot;Ove godine mi je bila vodilja, ne izazov, već na neki način znak nade, tako da će ostati na našem zidu i krasiti našu galeriju svojom lijepom energijom.&quot;<p class='text-right text-xs font-sans uppercase tracking-widest font-semibold text-[#D4AF37] not-italic mt-3'>— Nataša Stević</p>" data-en="&quot;This year it was my guide, not a challenge, but in a way a sign of hope, so it will stay on our wall and grace our gallery with its beautiful energy.&quot;<p class='text-right text-xs font-sans uppercase tracking-widest font-semibold text-[#D4AF37] not-italic mt-3'>— Nataša Stević</p>">
                     "Ove godine mi je bila vodilja, ne izazov, već na neki način znak nade, tako da će ostati na našem zidu i krasiti našu galeriju svojom lijepom energijom."
                     <p class="text-right text-xs font-sans uppercase tracking-widest font-semibold text-[#D4AF37] not-italic mt-3">— Nataša Stević</p>
                 </div>
                 
-                <p class="text-stone-500 text-sm font-light leading-relaxed tracking-wide">
+                <p class="text-stone-500 text-sm font-light leading-relaxed tracking-wide" data-bs="Postoje radovi koji nadilaze samu umjetnost i postaju osobni svjetionici. Za autoricu, ovo platno predstavlja čistu materijalizaciju unutarnje svjetlosti i nade." data-en="There are artworks that transcend art itself and become personal beacons. For the author, this canvas represents the pure materialization of inner light and hope.">
                     Postoje radovi koji nadilaze samu umjetnost i postaju osobni svjetionici. Za autoricu, ovo platno predstavlja čistu materijalizaciju unutarnje svjetlosti i nade.
                 </p>
             </div>
@@ -652,7 +647,7 @@
                 <div class="gallery-frame w-full max-w-[420px] bg-white shadow-xl cursor-pointer-target relative">
                     <img src="slika10.jpg" class="w-full h-auto object-cover transition-all duration-700" alt="Slika Svjetlosti">
                     <div class="absolute inset-0 z-10 bottom-16 transparent-shield"></div>
-                    <div class="text-center pt-4 text-[10px] tracking-[0.2em] uppercase text-stone-400 font-medium border-t border-stone-100 mt-4">
+                    <div class="text-center pt-4 text-[10px] tracking-[0.2em] uppercase text-stone-400 font-medium border-t border-stone-100 mt-4" data-bs="&quot;Naslikala sam svjetlost&quot;" data-en="&quot;I painted the light&quot;">
                         "Naslikala sam svjetlost"
                     </div>
                 </div>
@@ -663,7 +658,7 @@
 
     <!-- LIGHTBOX -->
     <div id="lightbox" role="dialog" aria-modal="true">
-        <button id="lightbox-close"><i class="fas fa-times mr-2"></i> Zatvori</button>
+        <button id="lightbox-close" data-bs="<i class='fas fa-times mr-2'></i> Zatvori" data-en="<i class='fas fa-times mr-2'></i> Close"><i class="fas fa-times mr-2"></i> Zatvori</button>
         <button id="lightbox-prev"><i class="fas fa-chevron-left"></i></button>
         <img id="lightbox-img" src="" alt="">
         <p id="lightbox-caption"></p>
@@ -675,15 +670,15 @@
         <div class="max-w-6xl mx-auto">
             
             <div class="text-center mb-20" data-aos="fade-up">
-                <span class="text-[#D4AF37] uppercase tracking-[0.3em] text-[10px] font-semibold block mb-2">Glavni opus</span>
-                <h2 class="text-2xl md:text-4xl font-normal text-[#2C2A29] uppercase tracking-wider">Kolekcija Galerije ArtS</h2>
+                <span class="text-[#D4AF37] uppercase tracking-[0.3em] text-[10px] font-semibold block mb-2" data-bs="Glavni opus" data-en="Main opus">Glavni opus</span>
+                <h2 class="text-2xl md:text-4xl font-normal text-[#2C2A29] uppercase tracking-wider" data-bs="Kolekcija Galerije ArtS" data-en="ArtS Gallery Collection">Kolekcija Galerije ArtS</h2>
                 <div class="h-[1px] w-12 bg-[#D4AF37]/40 mx-auto mt-4"></div>
             </div>
 
             <!-- === GALERIJA I === -->
             <div data-aos="fade-up" data-aos-duration="1000">
                 <div class="gallery-section-label">
-                    <span>Serija I &mdash; Slike</span>
+                    <span data-bs="Serija I &mdash; Slike" data-en="Series I &mdash; Paintings">Serija I &mdash; Slike</span>
                     <div class="gallery-section-line"></div>
                     <div class="gallery-nav">
                         <button class="gallery-nav-btn cursor-pointer-target" onclick="swiper1.slidePrev()"><i class="fas fa-arrow-left"></i></button>
@@ -693,76 +688,76 @@
                 <div class="swiper artSwiper1 cursor-pointer-target">
                     <div class="swiper-wrapper">
 
-                        <div class="swiper-slide cursor-pointer-target" onclick="openLightbox(this, 'Šumska magija')">
+                        <div class="swiper-slide cursor-pointer-target" onclick="openLightbox(this, this.querySelector('.slide-caption-title').textContent)">
                             <div class="slide-inner h-tall">
                                 <img src="slika.jpg" alt="Šumska magija">
-                                <div class="slide-overlay"><span><span class="slide-overlay-num">01</span><span class="slide-overlay-title">Šumska magija</span></span></div>
+                                <div class="slide-overlay"><span><span class="slide-overlay-num">01</span><span class="slide-overlay-title" data-bs="Šumska magija" data-en="Forest Magic">Šumska magija</span></span></div>
                                 <div class="absolute inset-0 z-10 transparent-shield"></div>
                             </div>
-                            <div class="slide-caption"><span class="slide-caption-title">Šumska magija</span><div class="slide-caption-icon"><i class="fas fa-expand"></i></div></div>
+                            <div class="slide-caption"><span class="slide-caption-title" data-bs="Šumska magija" data-en="Forest Magic">Šumska magija</span><div class="slide-caption-icon"><i class="fas fa-expand"></i></div></div>
                         </div>
 
-                        <div class="swiper-slide cursor-pointer-target" onclick="openLightbox(this, 'Melankolija labuda')">
+                        <div class="swiper-slide cursor-pointer-target" onclick="openLightbox(this, this.querySelector('.slide-caption-title').textContent)">
                             <div class="slide-inner h-short">
                                 <img src="slika1.jpg" alt="Melankolija labuda">
-                                <div class="slide-overlay"><span><span class="slide-overlay-num">02</span><span class="slide-overlay-title">Melankolija labuda</span></span></div>
+                                <div class="slide-overlay"><span><span class="slide-overlay-num">02</span><span class="slide-overlay-title" data-bs="Melankolija labuda" data-en="Swan's Melancholy">Melankolija labuda</span></span></div>
                                 <div class="absolute inset-0 z-10 transparent-shield"></div>
                             </div>
-                            <div class="slide-caption"><span class="slide-caption-title">Melankolija labuda</span><div class="slide-caption-icon"><i class="fas fa-expand"></i></div></div>
+                            <div class="slide-caption"><span class="slide-caption-title" data-bs="Melankolija labuda" data-en="Swan's Melancholy">Melankolija labuda</span><div class="slide-caption-icon"><i class="fas fa-expand"></i></div></div>
                         </div>
 
-                        <div class="swiper-slide cursor-pointer-target" onclick="openLightbox(this, 'Korak kroz snove')">
+                        <div class="swiper-slide cursor-pointer-target" onclick="openLightbox(this, this.querySelector('.slide-caption-title').textContent)">
                             <div class="slide-inner h-mid">
                                 <img src="slika2.jpg" alt="Korak kroz snove">
-                                <div class="slide-overlay"><span><span class="slide-overlay-num">03</span><span class="slide-overlay-title">Korak kroz snove</span></span></div>
+                                <div class="slide-overlay"><span><span class="slide-overlay-num">03</span><span class="slide-overlay-title" data-bs="Korak kroz snove" data-en="A Step Through Dreams">Korak kroz snove</span></span></div>
                                 <div class="absolute inset-0 z-10 transparent-shield"></div>
                             </div>
-                            <div class="slide-caption"><span class="slide-caption-title">Korak kroz snove</span><div class="slide-caption-icon"><i class="fas fa-expand"></i></div></div>
+                            <div class="slide-caption"><span class="slide-caption-title" data-bs="Korak kroz snove" data-en="A Step Through Dreams">Korak kroz snove</span><div class="slide-caption-icon"><i class="fas fa-expand"></i></div></div>
                         </div>
 
-                        <div class="swiper-slide cursor-pointer-target" onclick="openLightbox(this, 'Između prošlosti i sadašnjosti')">
+                        <div class="swiper-slide cursor-pointer-target" onclick="openLightbox(this, this.querySelector('.slide-caption-title').textContent)">
                             <div class="slide-inner h-tall">
                                 <img src="slika3.jpg" alt="Između prošlosti i sadašnjosti">
-                                <div class="slide-overlay"><span><span class="slide-overlay-num">04</span><span class="slide-overlay-title">Između prošlosti i sadašnjosti</span></span></div>
+                                <div class="slide-overlay"><span><span class="slide-overlay-num">04</span><span class="slide-overlay-title" data-bs="Između prošlosti i sadašnjosti" data-en="Between Past and Present">Između prošlosti i sadašnjosti</span></span></div>
                                 <div class="absolute inset-0 z-10 transparent-shield"></div>
                             </div>
-                            <div class="slide-caption"><span class="slide-caption-title">Između prošlosti i sadašnjosti</span><div class="slide-caption-icon"><i class="fas fa-expand"></i></div></div>
+                            <div class="slide-caption"><span class="slide-caption-title" data-bs="Između prošlosti i sadašnjosti" data-en="Between Past and Present">Između prošlosti i sadašnjosti</span><div class="slide-caption-icon"><i class="fas fa-expand"></i></div></div>
                         </div>
 
-                        <div class="swiper-slide cursor-pointer-target" onclick="openLightbox(this, 'Sanjarenje u čamcu')">
+                        <div class="swiper-slide cursor-pointer-target" onclick="openLightbox(this, this.querySelector('.slide-caption-title').textContent)">
                             <div class="slide-inner h-short">
                                 <img src="slika4.jpg" alt="Sanjarenje u čamcu">
-                                <div class="slide-overlay"><span><span class="slide-overlay-num">05</span><span class="slide-overlay-title">Sanjarenje u čamcu</span></span></div>
+                                <div class="slide-overlay"><span><span class="slide-overlay-num">05</span><span class="slide-overlay-title" data-bs="Sanjarenje u čamcu" data-en="Daydreaming in a Boat">Sanjarenje u čamcu</span></span></div>
                                 <div class="absolute inset-0 z-10 transparent-shield"></div>
                             </div>
-                            <div class="slide-caption"><span class="slide-caption-title">Sanjarenje u čamcu</span><div class="slide-caption-icon"><i class="fas fa-expand"></i></div></div>
+                            <div class="slide-caption"><span class="slide-caption-title" data-bs="Sanjarenje u čamcu" data-en="Daydreaming in a Boat">Sanjarenje u čamcu</span><div class="slide-caption-icon"><i class="fas fa-expand"></i></div></div>
                         </div>
 
-                        <div class="swiper-slide cursor-pointer-target" onclick="openLightbox(this, 'Zeleni baršun i ptica')">
+                        <div class="swiper-slide cursor-pointer-target" onclick="openLightbox(this, this.querySelector('.slide-caption-title').textContent)">
                             <div class="slide-inner h-mid">
                                 <img src="slika5.jpg" alt="Zeleni baršun i ptica">
-                                <div class="slide-overlay"><span><span class="slide-overlay-num">06</span><span class="slide-overlay-title">Zeleni baršun i ptica</span></span></div>
+                                <div class="slide-overlay"><span><span class="slide-overlay-num">06</span><span class="slide-overlay-title" data-bs="Zeleni baršun i ptica" data-en="Green Velvet and a Bird">Zeleni baršun i ptica</span></span></div>
                                 <div class="absolute inset-0 z-10 transparent-shield"></div>
                             </div>
-                            <div class="slide-caption"><span class="slide-caption-title">Zeleni baršun i ptica</span><div class="slide-caption-icon"><i class="fas fa-expand"></i></div></div>
+                            <div class="slide-caption"><span class="slide-caption-title" data-bs="Zeleni baršun i ptica" data-en="Green Velvet and a Bird">Zeleni baršun i ptica</span><div class="slide-caption-icon"><i class="fas fa-expand"></i></div></div>
                         </div>
 
-                        <div class="swiper-slide cursor-pointer-target" onclick="openLightbox(this, 'Inspiracija, Romanija')">
+                        <div class="swiper-slide cursor-pointer-target" onclick="openLightbox(this, this.querySelector('.slide-caption-title').textContent)">
                             <div class="slide-inner h-tall">
                                 <img src="slika6.jpg" alt="Inspiracija, Romanija">
-                                <div class="slide-overlay"><span><span class="slide-overlay-num">07</span><span class="slide-overlay-title">Inspiracija, Romanija</span></span></div>
+                                <div class="slide-overlay"><span><span class="slide-overlay-num">07</span><span class="slide-overlay-title" data-bs="Inspiracija, Romanija" data-en="Inspiration, Romanija">Inspiracija, Romanija</span></span></div>
                                 <div class="absolute inset-0 z-10 transparent-shield"></div>
                             </div>
-                            <div class="slide-caption"><span class="slide-caption-title">Inspiracija, Romanija</span><div class="slide-caption-icon"><i class="fas fa-expand"></i></div></div>
+                            <div class="slide-caption"><span class="slide-caption-title" data-bs="Inspiracija, Romanija" data-en="Inspiration, Romanija">Inspiracija, Romanija</span><div class="slide-caption-icon"><i class="fas fa-expand"></i></div></div>
                         </div>
 
-                        <div class="swiper-slide cursor-pointer-target" onclick="openLightbox(this, 'Acutus sensus')">
+                        <div class="swiper-slide cursor-pointer-target" onclick="openLightbox(this, this.querySelector('.slide-caption-title').textContent)">
                             <div class="slide-inner h-short">
                                 <img src="slika7.jpg" alt="Acutus sensus">
-                                <div class="slide-overlay"><span><span class="slide-overlay-num">08</span><span class="slide-overlay-title">Acutus sensus</span></span></div>
+                                <div class="slide-overlay"><span><span class="slide-overlay-num">08</span><span class="slide-overlay-title" data-bs="Acutus sensus" data-en="Acutus Sensus">Acutus sensus</span></span></div>
                                 <div class="absolute inset-0 z-10 transparent-shield"></div>
                             </div>
-                            <div class="slide-caption"><span class="slide-caption-title">Acutus sensus</span><div class="slide-caption-icon"><i class="fas fa-expand"></i></div></div>
+                            <div class="slide-caption"><span class="slide-caption-title" data-bs="Acutus sensus" data-en="Acutus Sensus">Acutus sensus</span><div class="slide-caption-icon"><i class="fas fa-expand"></i></div></div>
                         </div>
 
                     </div>
@@ -775,7 +770,7 @@
             <!-- === GALERIJA II === -->
             <div data-aos="fade-up" data-aos-duration="1000">
                 <div class="gallery-section-label">
-                    <span>Serija II &mdash; Platna</span>
+                    <span data-bs="Serija II &mdash; Platna" data-en="Series II &mdash; Canvases">Serija II &mdash; Platna</span>
                     <div class="gallery-section-line"></div>
                     <div class="gallery-nav">
                         <button class="gallery-nav-btn cursor-pointer-target" onclick="swiper2.slidePrev()"><i class="fas fa-arrow-left"></i></button>
@@ -785,58 +780,58 @@
                 <div class="swiper artSwiper2 cursor-pointer-target">
                     <div class="swiper-wrapper">
 
-                        <div class="swiper-slide cursor-pointer-target" onclick="openLightbox(this, 'Miris svježeg cvijeća')">
+                        <div class="swiper-slide cursor-pointer-target" onclick="openLightbox(this, this.querySelector('.slide-caption-title').textContent)">
                             <div class="slide-inner h-mid">
                                 <img src="slika11.jpg" alt="Miris svježeg cvijeća">
-                                <div class="slide-overlay"><span><span class="slide-overlay-num">01</span><span class="slide-overlay-title">Miris svježeg cvijeća</span></span></div>
+                                <div class="slide-overlay"><span><span class="slide-overlay-num">01</span><span class="slide-overlay-title" data-bs="Miris svježeg cvijeća" data-en="Scent of Fresh Flowers">Miris svježeg cvijeća</span></span></div>
                                 <div class="absolute inset-0 z-10 transparent-shield"></div>
                             </div>
-                            <div class="slide-caption"><span class="slide-caption-title">Miris svježeg cvijeća</span><div class="slide-caption-icon"><i class="fas fa-expand"></i></div></div>
+                            <div class="slide-caption"><span class="slide-caption-title" data-bs="Miris svježeg cvijeća" data-en="Scent of Fresh Flowers">Miris svježeg cvijeća</span><div class="slide-caption-icon"><i class="fas fa-expand"></i></div></div>
                         </div>
 
-                        <div class="swiper-slide cursor-pointer-target" onclick="openLightbox(this, 'Sloboda')">
+                        <div class="swiper-slide cursor-pointer-target" onclick="openLightbox(this, this.querySelector('.slide-caption-title').textContent)">
                             <div class="slide-inner h-tall">
                                 <img src="slika12.jpg" alt="Sloboda">
-                                <div class="slide-overlay"><span><span class="slide-overlay-num">02</span><span class="slide-overlay-title">Sloboda</span></span></div>
+                                <div class="slide-overlay"><span><span class="slide-overlay-num">02</span><span class="slide-overlay-title" data-bs="Sloboda" data-en="Freedom">Sloboda</span></span></div>
                                 <div class="absolute inset-0 z-10 transparent-shield"></div>
                             </div>
-                            <div class="slide-caption"><span class="slide-caption-title">Sloboda</span><div class="slide-caption-icon"><i class="fas fa-expand"></i></div></div>
+                            <div class="slide-caption"><span class="slide-caption-title" data-bs="Sloboda" data-en="Freedom">Sloboda</span><div class="slide-caption-icon"><i class="fas fa-expand"></i></div></div>
                         </div>
 
-                        <div class="swiper-slide cursor-pointer-target" onclick="openLightbox(this, 'Serijal: Dugi brodovi')">
+                        <div class="swiper-slide cursor-pointer-target" onclick="openLightbox(this, this.querySelector('.slide-caption-title').textContent)">
                             <div class="slide-inner h-short">
                                 <img src="slika13.jpg" alt="Serijal: Dugi brodovi">
-                                <div class="slide-overlay"><span><span class="slide-overlay-num">03</span><span class="slide-overlay-title">Serijal: Dugi brodovi</span></span></div>
+                                <div class="slide-overlay"><span><span class="slide-overlay-num">03</span><span class="slide-overlay-title" data-bs="Serijal: Dugi brodovi" data-en="Series: Longships">Serijal: Dugi brodovi</span></span></div>
                                 <div class="absolute inset-0 z-10 transparent-shield"></div>
                             </div>
-                            <div class="slide-caption"><span class="slide-caption-title">Serijal: Dugi brodovi</span><div class="slide-caption-icon"><i class="fas fa-expand"></i></div></div>
+                            <div class="slide-caption"><span class="slide-caption-title" data-bs="Serijal: Dugi brodovi" data-en="Series: Longships">Serijal: Dugi brodovi</span><div class="slide-caption-icon"><i class="fas fa-expand"></i></div></div>
                         </div>
 
-                        <div class="swiper-slide cursor-pointer-target" onclick="openLightbox(this, 'Radila sam tigra lava, ostaje puma')">
+                        <div class="swiper-slide cursor-pointer-target" onclick="openLightbox(this, this.querySelector('.slide-caption-title').textContent)">
                             <div class="slide-inner h-tall">
                                 <img src="slika14.jpg" alt="Radila sam tigra lava, ostaje puma">
-                                <div class="slide-overlay"><span><span class="slide-overlay-num">04</span><span class="slide-overlay-title">Radila sam tigra lava, ostaje puma</span></span></div>
+                                <div class="slide-overlay"><span><span class="slide-overlay-num">04</span><span class="slide-overlay-title" data-bs="Radila sam tigra lava, ostaje puma" data-en="I made a tiger, a lion, the puma remains">Radila sam tigra lava, ostaje puma</span></span></div>
                                 <div class="absolute inset-0 z-10 transparent-shield"></div>
                             </div>
-                            <div class="slide-caption"><span class="slide-caption-title">Radila sam tigra lava, ostaje puma</span><div class="slide-caption-icon"><i class="fas fa-expand"></i></div></div>
+                            <div class="slide-caption"><span class="slide-caption-title" data-bs="Radila sam tigra lava, ostaje puma" data-en="I made a tiger, a lion, the puma remains">Radila sam tigra lava, ostaje puma</span><div class="slide-caption-icon"><i class="fas fa-expand"></i></div></div>
                         </div>
 
-                        <div class="swiper-slide cursor-pointer-target" onclick="openLightbox(this, 'Lastavica')">
+                        <div class="swiper-slide cursor-pointer-target" onclick="openLightbox(this, this.querySelector('.slide-caption-title').textContent)">
                             <div class="slide-inner h-mid">
                                 <img src="slika15.jpg" alt="Lastavica">
-                                <div class="slide-overlay"><span><span class="slide-overlay-num">05</span><span class="slide-overlay-title">Lastavica</span></span></div>
+                                <div class="slide-overlay"><span><span class="slide-overlay-num">05</span><span class="slide-overlay-title" data-bs="Lastavica" data-en="Swallow">Lastavica</span></span></div>
                                 <div class="absolute inset-0 z-10 transparent-shield"></div>
                             </div>
-                            <div class="slide-caption"><span class="slide-caption-title">Lastavica</span><div class="slide-caption-icon"><i class="fas fa-expand"></i></div></div>
+                            <div class="slide-caption"><span class="slide-caption-title" data-bs="Lastavica" data-en="Swallow">Lastavica</span><div class="slide-caption-icon"><i class="fas fa-expand"></i></div></div>
                         </div>
 
-                        <div class="swiper-slide cursor-pointer-target" onclick="openLightbox(this, 'Parfem u zraku')">
+                        <div class="swiper-slide cursor-pointer-target" onclick="openLightbox(this, this.querySelector('.slide-caption-title').textContent)">
                             <div class="slide-inner h-short">
                                 <img src="slika16.jpg" alt="Parfem u zraku">
-                                <div class="slide-overlay"><span><span class="slide-overlay-num">06</span><span class="slide-overlay-title">Parfem u zraku</span></span></div>
+                                <div class="slide-overlay"><span><span class="slide-overlay-num">06</span><span class="slide-overlay-title" data-bs="Parfem u zraku" data-en="Perfume in the Air">Parfem u zraku</span></span></div>
                                 <div class="absolute inset-0 z-10 transparent-shield"></div>
                             </div>
-                            <div class="slide-caption"><span class="slide-caption-title">Parfem u zraku (Aroma samopouzdanja)</span><div class="slide-caption-icon"><i class="fas fa-expand"></i></div></div>
+                            <div class="slide-caption"><span class="slide-caption-title" data-bs="Parfem u zraku (Aroma samopouzdanja)" data-en="Perfume in the Air (Aroma of Confidence)">Parfem u zraku (Aroma samopouzdanja)</span><div class="slide-caption-icon"><i class="fas fa-expand"></i></div></div>
                         </div>
 
                     </div>
@@ -849,7 +844,7 @@
             <!-- === GALERIJA III === -->
             <div data-aos="fade-up" data-aos-duration="1000">
                 <div class="gallery-section-label">
-                    <span>Serija III &mdash; Atelje</span>
+                    <span data-bs="Serija III &mdash; Atelje" data-en="Series III &mdash; Studio">Serija III &mdash; Atelje</span>
                     <div class="gallery-section-line"></div>
                     <div class="gallery-nav">
                         <button class="gallery-nav-btn cursor-pointer-target" onclick="swiper3.slidePrev()"><i class="fas fa-arrow-left"></i></button>
@@ -859,58 +854,58 @@
                 <div class="swiper artSwiper3 cursor-pointer-target">
                     <div class="swiper-wrapper">
 
-                        <div class="swiper-slide cursor-pointer-target" onclick="openLightbox(this, 'Ekstaza detalja i vela')">
+                        <div class="swiper-slide cursor-pointer-target" onclick="openLightbox(this, this.querySelector('.slide-caption-title').textContent)">
                             <div class="slide-inner h-tall">
                                 <img src="natasa.jpg" alt="Ekstaza detalja i vela">
-                                <div class="slide-overlay"><span><span class="slide-overlay-num">01</span><span class="slide-overlay-title">Ekstaza detalja i vela</span></span></div>
+                                <div class="slide-overlay"><span><span class="slide-overlay-num">01</span><span class="slide-overlay-title" data-bs="Ekstaza detalja i vela" data-en="Ecstasy of Details and Veils">Ekstaza detalja i vela</span></span></div>
                                 <div class="absolute inset-0 z-10 transparent-shield"></div>
                             </div>
-                            <div class="slide-caption"><span class="slide-caption-title">Ekstaza detalja i vela</span><div class="slide-caption-icon"><i class="fas fa-expand"></i></div></div>
+                            <div class="slide-caption"><span class="slide-caption-title" data-bs="Ekstaza detalja i vela" data-en="Ecstasy of Details and Veils">Ekstaza detalja i vela</span><div class="slide-caption-icon"><i class="fas fa-expand"></i></div></div>
                         </div>
 
-                        <div class="swiper-slide cursor-pointer-target" onclick="openLightbox(this, 'Ples balerina u ateljeu')">
+                        <div class="swiper-slide cursor-pointer-target" onclick="openLightbox(this, this.querySelector('.slide-caption-title').textContent)">
                             <div class="slide-inner h-short">
                                 <img src="natasa1.jpg" alt="Ples balerina u ateljeu">
-                                <div class="slide-overlay"><span><span class="slide-overlay-num">02</span><span class="slide-overlay-title">Ples balerina u ateljeu</span></span></div>
+                                <div class="slide-overlay"><span><span class="slide-overlay-num">02</span><span class="slide-overlay-title" data-bs="Ples balerina u ateljeu" data-en="Ballerinas' Dance in the Studio">Ples balerina u ateljeu</span></span></div>
                                 <div class="absolute inset-0 z-10 transparent-shield"></div>
                             </div>
-                            <div class="slide-caption"><span class="slide-caption-title">Ples balerina u ateljeu</span><div class="slide-caption-icon"><i class="fas fa-expand"></i></div></div>
+                            <div class="slide-caption"><span class="slide-caption-title" data-bs="Ples balerina u ateljeu" data-en="Ballerinas' Dance in the Studio">Ples balerina u ateljeu</span><div class="slide-caption-icon"><i class="fas fa-expand"></i></div></div>
                         </div>
 
-                        <div class="swiper-slide cursor-pointer-target" onclick="openLightbox(this, 'Čuvar tajni i golubica')">
+                        <div class="swiper-slide cursor-pointer-target" onclick="openLightbox(this, this.querySelector('.slide-caption-title').textContent)">
                             <div class="slide-inner h-mid">
                                 <img src="natasa2.jpg" alt="Čuvar tajni i golubica">
-                                <div class="slide-overlay"><span><span class="slide-overlay-num">03</span><span class="slide-overlay-title">Čuvar tajni i golubica</span></span></div>
+                                <div class="slide-overlay"><span><span class="slide-overlay-num">03</span><span class="slide-overlay-title" data-bs="Čuvar tajni i golubica" data-en="Keeper of Secrets and the Dove">Čuvar tajni i golubica</span></span></div>
                                 <div class="absolute inset-0 z-10 transparent-shield"></div>
                             </div>
-                            <div class="slide-caption"><span class="slide-caption-title">Čuvar tajni i golubica</span><div class="slide-caption-icon"><i class="fas fa-expand"></i></div></div>
+                            <div class="slide-caption"><span class="slide-caption-title" data-bs="Čuvar tajni i golubica" data-en="Keeper of Secrets and the Dove">Čuvar tajni i golubica</span><div class="slide-caption-icon"><i class="fas fa-expand"></i></div></div>
                         </div>
 
-                        <div class="swiper-slide cursor-pointer-target" onclick="openLightbox(this, 'Procvat i leptir')">
+                        <div class="swiper-slide cursor-pointer-target" onclick="openLightbox(this, this.querySelector('.slide-caption-title').textContent)">
                             <div class="slide-inner h-tall">
                                 <img src="natasa3.jpg" alt="Procvat i leptir">
-                                <div class="slide-overlay"><span><span class="slide-overlay-num">04</span><span class="slide-overlay-title">Procvat i leptir</span></span></div>
+                                <div class="slide-overlay"><span><span class="slide-overlay-num">04</span><span class="slide-overlay-title" data-bs="Procvat i leptir" data-en="Blossom and Butterfly">Procvat i leptir</span></span></div>
                                 <div class="absolute inset-0 z-10 transparent-shield"></div>
                             </div>
-                            <div class="slide-caption"><span class="slide-caption-title">Procvat i leptir</span><div class="slide-caption-icon"><i class="fas fa-expand"></i></div></div>
+                            <div class="slide-caption"><span class="slide-caption-title" data-bs="Procvat i leptir" data-en="Blossom and Butterfly">Procvat i leptir</span><div class="slide-caption-icon"><i class="fas fa-expand"></i></div></div>
                         </div>
 
-                        <div class="swiper-slide cursor-pointer-target" onclick="openLightbox(this, 'Povez pravde')">
+                        <div class="swiper-slide cursor-pointer-target" onclick="openLightbox(this, this.querySelector('.slide-caption-title').textContent)">
                             <div class="slide-inner h-short">
                                 <img src="natasa4.jpg" alt="Povez pravde">
-                                <div class="slide-overlay"><span><span class="slide-overlay-num">05</span><span class="slide-overlay-title">Povez pravde</span></span></div>
+                                <div class="slide-overlay"><span><span class="slide-overlay-num">05</span><span class="slide-overlay-title" data-bs="Povez pravde" data-en="Blindfold of Justice">Povez pravde</span></span></div>
                                 <div class="absolute inset-0 z-10 transparent-shield"></div>
                             </div>
-                            <div class="slide-caption"><span class="slide-caption-title">Povez pravde</span><div class="slide-caption-icon"><i class="fas fa-expand"></i></div></div>
+                            <div class="slide-caption"><span class="slide-caption-title" data-bs="Povez pravde" data-en="Blindfold of Justice">Povez pravde</span><div class="slide-caption-icon"><i class="fas fa-expand"></i></div></div>
                         </div>
 
-                        <div class="swiper-slide cursor-pointer-target" onclick="openLightbox(this, 'Melankolija plesačice')">
+                        <div class="swiper-slide cursor-pointer-target" onclick="openLightbox(this, this.querySelector('.slide-caption-title').textContent)">
                             <div class="slide-inner h-mid">
                                 <img src="natasa5.jpg" alt="Melankolija plesačice">
-                                <div class="slide-overlay"><span><span class="slide-overlay-num">06</span><span class="slide-overlay-title">Melankolija plesačice</span></span></div>
+                                <div class="slide-overlay"><span><span class="slide-overlay-num">06</span><span class="slide-overlay-title" data-bs="Melankolija plesačice" data-en="Dancer's Melancholy">Melankolija plesačice</span></span></div>
                                 <div class="absolute inset-0 z-10 transparent-shield"></div>
                             </div>
-                            <div class="slide-caption"><span class="slide-caption-title">Melankolija plesačice</span><div class="slide-caption-icon"><i class="fas fa-expand"></i></div></div>
+                            <div class="slide-caption"><span class="slide-caption-title" data-bs="Melankolija plesačice" data-en="Dancer's Melancholy">Melankolija plesačice</span><div class="slide-caption-icon"><i class="fas fa-expand"></i></div></div>
                         </div>
 
                     </div>
@@ -929,28 +924,26 @@
                 
                 <div class="lg:col-span-7 space-y-8" data-aos="fade-right" data-aos-duration="1200">
                     <div class="space-y-4">
-                        <span class="text-[#D4AF37] uppercase tracking-[0.4em] text-xs font-semibold block">KREATIVNE SURADNJE</span>
-                        <h2 class="text-4xl md:text-6xl font-normal text-[#2C2A29] leading-tight tracking-tight font-serif-art">Otvorena za<br><span class="italic text-stone-400 lowercase">nove ideje.</span></h2>
+                        <span class="text-[#D4AF37] uppercase tracking-[0.4em] text-xs font-semibold block" data-bs="KREATIVNE SURADNJE" data-en="CREATIVE COLLABORATIONS">KREATIVNE SURADNJE</span>
+                        <h2 class="text-4xl md:text-6xl font-normal text-[#2C2A29] leading-tight tracking-tight font-serif-art" data-bs="Otvorena za<br><span class='italic text-stone-400 lowercase'>nove ideje.</span>" data-en="Open to<br><span class='italic text-stone-400 lowercase'>new ideas.</span>">Otvorena za<br><span class="italic text-stone-400 lowercase">nove ideje.</span></h2>
                     </div>
                     
-                    <p class="text-stone-500 font-light text-base md:text-lg leading-relaxed tracking-wide max-w-xl">
+                    <p class="text-stone-500 font-light text-base md:text-lg leading-relaxed tracking-wide max-w-xl" data-bs="Bilo da se radi o unikatnoj slici po narudžbi ili posebnom poklonu – vaša vizija može oživjeti u šumskom ateljeu. Stupimo u kontakt." data-en="Whether it's a unique custom painting or a special gift – your vision can come to life in the forest studio. Let's get in touch.">
                         Bilo da se radi o unikatnoj slici po narudžbi ili posebnom poklonu – vaša vizija može oživjeti u šumskom ateljeu. Stupimo u kontakt.
                     </p>
 
-                    <!-- INFO BLOK: Prodaja + isporuka -->
                     <div class="border-l-2 border-[#D4AF37] pl-5 space-y-1">
-                        <p class="text-[10px] uppercase tracking-[0.3em] text-[#D4AF37] font-medium">Prodaja & Isporuka</p>
-                        <p class="text-stone-600 font-light text-sm leading-relaxed">Prodaja unikatnih umjetničkih slika. Moguća isporuka bilo gdje u BiH i regionu.</p>
+                        <p class="text-[10px] uppercase tracking-[0.3em] text-[#D4AF37] font-medium" data-bs="Prodaja & Isporuka" data-en="Sales & Delivery">Prodaja & Isporuka</p>
+                        <p class="text-stone-600 font-light text-sm leading-relaxed" data-bs="Prodaja unikatnih umjetničkih slika. Moguća isporuka bilo gdje u BiH i regionu." data-en="Sale of unique art paintings. Delivery available anywhere in B&H and the region.">Prodaja unikatnih umjetničkih slika. Moguća isporuka bilo gdje u BiH i regionu.</p>
                     </div>
 
-                    <!-- KONTAKT PODACI -->
                     <div class="space-y-3 pt-2">
                         <a href="tel:+38766004531" class="cursor-pointer-target group flex items-center gap-4">
                             <div class="w-9 h-9 border border-stone-200 flex items-center justify-center text-stone-400 group-hover:border-[#D4AF37] group-hover:text-[#D4AF37] transition-all duration-300 flex-shrink-0">
                                 <i class="fas fa-phone text-[10px]"></i>
                             </div>
                             <div>
-                                <p class="text-[9px] uppercase tracking-[0.3em] text-stone-400 mb-0.5">Mobitel</p>
+                                <p class="text-[9px] uppercase tracking-[0.3em] text-stone-400 mb-0.5" data-bs="Mobitel" data-en="Mobile">Mobitel</p>
                                 <p class="text-stone-700 font-light text-base tracking-wide">+387 66 004 531</p>
                             </div>
                         </a>
@@ -959,52 +952,51 @@
                                 <i class="fas fa-envelope text-[10px]"></i>
                             </div>
                             <div>
-                                <p class="text-[9px] uppercase tracking-[0.3em] text-stone-400 mb-0.5">E-pošta</p>
+                                <p class="text-[9px] uppercase tracking-[0.3em] text-stone-400 mb-0.5" data-bs="E-pošta" data-en="E-mail">E-pošta</p>
                                 <p class="text-stone-700 font-light text-base tracking-wide">artsgalerija@gmail.com</p>
                             </div>
                         </a>
                     </div>
 
-                    <!-- WHATSAPP BOX -->
                     <div class="bg-[#2C2A29] p-6 flex flex-col sm:flex-row items-start sm:items-center gap-5" data-aos="fade-up" data-aos-delay="100">
                         <div class="flex-1 space-y-1">
-                            <p class="text-[9px] uppercase tracking-[0.3em] text-[#D4AF37] font-medium">Brzi kontakt</p>
-                            <p class="text-[#FDFBF7] font-light text-sm leading-relaxed">Pišite ili nazovite direktno putem WhatsApp-a — odgovaramo brzo!</p>
+                            <p class="text-[9px] uppercase tracking-[0.3em] text-[#D4AF37] font-medium" data-bs="Brzi kontakt" data-en="Quick contact">Brzi kontakt</p>
+                            <p class="text-[#FDFBF7] font-light text-sm leading-relaxed" data-bs="Pišite ili nazovite direktno putem WhatsApp-a — odgovaramo brzo!" data-en="Write or call directly via WhatsApp — we reply fast!">Pišite ili nazovite direktno putem WhatsApp-a — odgovaramo brzo!</p>
                         </div>
                         <div class="flex flex-col gap-2 flex-shrink-0 w-full sm:w-auto">
                             <a href="https://wa.me/38766004531?text=Pozdrav%2C%20zanima%20me%20Va%C5%A1a%20slika..." target="_blank"
-                               class="cursor-pointer-target flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20bd5c] transition-colors duration-300 text-white text-[10px] uppercase tracking-[0.2em] font-medium px-5 py-3">
+                               class="cursor-pointer-target flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20bd5c] transition-colors duration-300 text-white text-[10px] uppercase tracking-[0.2em] font-medium px-5 py-3" data-bs="<i class='fab fa-whatsapp text-base'></i> WhatsApp poruka" data-en="<i class='fab fa-whatsapp text-base'></i> WhatsApp message">
                                 <i class="fab fa-whatsapp text-base"></i> WhatsApp poruka
                             </a>
                             <a href="https://wa.me/38766004531" target="_blank"
-                               class="cursor-pointer-target flex items-center justify-center gap-2 border border-stone-600 hover:border-[#D4AF37] text-stone-400 hover:text-[#D4AF37] transition-all duration-300 text-[10px] uppercase tracking-[0.2em] font-medium px-5 py-3">
+                               class="cursor-pointer-target flex items-center justify-center gap-2 border border-stone-600 hover:border-[#D4AF37] text-stone-400 hover:text-[#D4AF37] transition-all duration-300 text-[10px] uppercase tracking-[0.2em] font-medium px-5 py-3" data-bs="<i class='fab fa-whatsapp text-base'></i> WhatsApp poziv" data-en="<i class='fab fa-whatsapp text-base'></i> WhatsApp call">
                                 <i class="fab fa-whatsapp text-base"></i> WhatsApp poziv
                             </a>
                         </div>
                     </div>
 
                     <div class="pt-2 text-xs uppercase tracking-[0.25em] text-stone-400 font-medium">
-                        <p class="text-[10px] text-[#D4AF37] mb-1 uppercase tracking-[0.3em]">Atelje</p>
-                        <p class="text-stone-700 font-light normal-case tracking-wide text-base">Planina Romanija, Bosna i Hercegovina</p>
+                        <p class="text-[10px] text-[#D4AF37] mb-1 uppercase tracking-[0.3em]" data-bs="Atelje" data-en="Studio">Atelje</p>
+                        <p class="text-stone-700 font-light normal-case tracking-wide text-base" data-bs="Planina Romanija, Bosna i Hercegovina" data-en="Mount Romanija, Bosnia and Herzegovina">Planina Romanija, Bosna i Hercegovina</p>
                     </div>
                 </div>
 
                 <div class="lg:col-span-5 space-y-12 lg:pt-16" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="200">
-                    <h3 class="text-xs uppercase tracking-[0.35em] text-stone-400 font-medium border-b border-stone-200/60 pb-3">Izravna veza s ateljeom</h3>
+                    <h3 class="text-xs uppercase tracking-[0.35em] text-stone-400 font-medium border-b border-stone-200/60 pb-3" data-bs="Izravna veza s ateljeom" data-en="Direct connection with the studio">Izravna veza s ateljeom</h3>
                     
                     <div class="flex flex-col space-y-8">
                         <a href="https://www.instagram.com/_galerija.arts/" target="_blank" class="group flex flex-col cursor-pointer-target">
                             <span class="text-3xl md:text-4xl font-light text-[#2C2A29] tracking-[0.15em] uppercase font-serif-art transition-colors duration-300 group-hover:text-[#D4AF37]">
                                 INSTAGRAM
                             </span>
-                            <span class="text-[10px] tracking-[0.2em] text-stone-400 mt-1 uppercase font-medium">Pošaljite DM poruku</span>
+                            <span class="text-[10px] tracking-[0.2em] text-stone-400 mt-1 uppercase font-medium" data-bs="Pošaljite DM poruku" data-en="Send a DM message">Pošaljite DM poruku</span>
                         </a>
 
                         <a href="https://www.facebook.com/hippo911art" target="_blank" class="group flex flex-col cursor-pointer-target">
                             <span class="text-3xl md:text-4xl font-light text-[#2C2A29] tracking-[0.15em] uppercase font-serif-art transition-colors duration-300 group-hover:text-[#D4AF37]">
                                 FACEBOOK
                             </span>
-                            <span class="text-[10px] tracking-[0.2em] text-stone-400 mt-1 uppercase font-medium">Posjetite službenu stranicu</span>
+                            <span class="text-[10px] tracking-[0.2em] text-stone-400 mt-1 uppercase font-medium" data-bs="Posjetite službenu stranicu" data-en="Visit the official page">Posjetite službenu stranicu</span>
                         </a>
                     </div>
                 </div>
@@ -1020,21 +1012,21 @@
             
             <div class="space-y-2 cursor-pointer-target" data-aos="fade-up">
                 <p class="font-semibold text-stone-700 tracking-[0.25em]"><i class="fas fa-copyright text-[#D4AF37] mr-1.5"></i> LEGAL NOTICE & COPYRIGHT</p>
-                <p class="normal-case text-stone-400 tracking-normal font-light">
+                <p class="normal-case text-stone-400 tracking-normal font-light" data-bs="Sva autorska prava na umjetnička djela, tekstove, vizualne materialiale i koncepte prikazane na ovoj domeni u potpunosti pripadaju autorici Nataši Stević. Nijedan dio ovog weba ne smije se reproducirati bez pisane suglasnosti." data-en="All copyrights to the artworks, texts, visual materials, and concepts presented on this domain fully belong to the author Nataša Stević. No part of this website may be reproduced without written consent.">
                     Sva autorska prava na umjetnička djela, tekstove, vizualne materialiale i koncepte prikazane na ovoj domeni u potpunosti pripadaju autorici Nataši Stević. Nijedan dio ovog weba ne smije se reproducirati bez pisane suglasnosti.
                 </p>
             </div>
 
             <div class="space-y-2 cursor-pointer-target" data-aos="fade-up" data-aos-delay="100">
                 <p class="font-semibold text-stone-700 tracking-[0.25em]"><i class="fas fa-shield-halved text-[#D4AF37] mr-1.5"></i> PRIVACY & GDPR PROTECTION</p>
-                <p class="normal-case text-stone-400 tracking-normal font-light">
+                <p class="normal-case text-stone-400 tracking-normal font-light" data-bs="Ovaj portfolio poštuje Opću uredbu o zaštiti podataka (GDPR). Svi vaši podatci i interakcije ostaju strogo povjerljivi i koriste se isključivo za potrebe direktne komunikacije s ateljeom na Romaniji." data-en="This portfolio respects the General Data Protection Regulation (GDPR). All your data and interactions remain strictly confidential and are used exclusively for direct communication with the studio on Romanija.">
                     Ovaj portfolio poštuje Opću uredbu o zaštiti podataka (GDPR). Svi vaši podatci i interakcije ostaju strogo povjerljivi i koriste se isključivo za potrebe direktne komunikacije s ateljeom na Romaniji.
                 </p>
             </div>
 
             <div class="space-y-2 cursor-pointer-target" data-aos="fade-up" data-aos-delay="200">
-                <p class="font-semibold text-stone-800 tracking-[0.25em]"><i class="fas fa-gavel text-[#D4AF37] mr-1.5"></i> KAZNENA ODGOVORNOST</p>
-                <p class="normal-case text-stone-500 tracking-normal font-light font-medium">
+                <p class="font-semibold text-stone-800 tracking-[0.25em]" data-bs="<i class='fas fa-gavel text-[#D4AF37] mr-1.5'></i> KAZNENA ODGOVORNOST" data-en="<i class='fas fa-gavel text-[#D4AF37] mr-1.5'></i> CRIMINAL LIABILITY"><i class="fas fa-gavel text-[#D4AF37] mr-1.5"></i> KAZNENA ODGOVORNOST</p>
+                <p class="normal-case text-stone-500 tracking-normal font-light font-medium" data-bs="Svaka neovlaštena zlouporaba, preuzimanje, nelegalna distribucija ili komercijalno korištenje radova s ove domene bez izričite dozvole autorice predstavlja povredu zakona te podliježe trenutnoj materijalnoj i kaznenoj odgovornosti." data-en="Any unauthorized misuse, downloading, illegal distribution, or commercial use of works from this domain without the explicit permission of the author constitutes a violation of the law and is subject to immediate material and criminal liability.">
                     Svaka neovlaštena zlouporaba, preuzimanje, nelegalna distribucija ili komercijalno korištenje radova s ove domene bez izričite dozvole autorice predstavlja povredu zakona te podliježe trenutnoj materijalnoj i kaznenoj odgovornosti.
                 </p>
             </div>
@@ -1045,8 +1037,8 @@
     <!-- FOOTER -->
     <footer class="py-10 bg-[#2C2A29] text-center text-[9px] tracking-[0.25em] uppercase text-stone-500">
         <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row justify-between items-center gap-4">
-            <p>&copy; 2026 GALERIJA ARTS. SVA PRAVA PRIDRŽANA.</p>
-            <p>Poklon kreiran s <i class="fas fa-heart text-[#D4AF37] mx-0.5"></i> od: <a href="https://www.facebook.com/kezicvizuali.vg" target="_blank" class="text-[#D4AF37] hover:text-white transition-colors normal-case ml-1 cursor-pointer-target">Kezić Vizuali</a></p>
+            <p data-bs="&copy; 2026 GALERIJA ARTS. SVA PRAVA PRIDRŽANA." data-en="&copy; 2026 ARTS GALLERY. ALL RIGHTS RESERVED.">&copy; 2026 GALERIJA ARTS. SVA PRAVA PRIDRŽANA.</p>
+            <p data-bs="Poklon kreiran s <i class='fas fa-heart text-[#D4AF37] mx-0.5'></i> od: <a href='https://www.facebook.com/kezicvizuali.vg' target='_blank' class='text-[#D4AF37] hover:text-white transition-colors normal-case ml-1 cursor-pointer-target'>Kezić Vizuali</a>" data-en="Gift created with <i class='fas fa-heart text-[#D4AF37] mx-0.5'></i> by: <a href='https://www.facebook.com/kezicvizuali.vg' target='_blank' class='text-[#D4AF37] hover:text-white transition-colors normal-case ml-1 cursor-pointer-target'>Kezić Vizuali</a>">Poklon kreiran s <i class="fas fa-heart text-[#D4AF37] mx-0.5"></i> od: <a href="https://www.facebook.com/kezicvizuali.vg" target="_blank" class="text-[#D4AF37] hover:text-white transition-colors normal-case ml-1 cursor-pointer-target">Kezić Vizuali</a></p>
         </div>
     </footer>
 
@@ -1057,6 +1049,56 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     
     <script>
+        // FUNKCIJA ZA PROMJENU JEZIKA I METADATA
+        function setLanguage(lang) {
+            document.documentElement.lang = lang;
+            
+            // Promijeni tekstove za sve tagove koji imaju data-bs i data-en atribute
+            document.querySelectorAll('[data-bs]').forEach(el => {
+                if (lang === 'en' && el.hasAttribute('data-en')) {
+                    el.innerHTML = el.getAttribute('data-en');
+                } else {
+                    el.innerHTML = el.getAttribute('data-bs');
+                }
+            });
+            
+            // Promijeni osnovne Meta tagove
+            if (lang === 'en') {
+                document.getElementById('page-title').textContent = "ArtS Gallery | Nataša Stević – Art from Romanija";
+                document.getElementById('meta-desc').setAttribute("content", "Official portfolio of academic painter Nataša Stević. Unique art paintings from the forest studio on Romanija. Delivery across B&H and the region.");
+                document.getElementById('og-title').setAttribute("content", "ArtS Gallery | Nataša Stević");
+                document.getElementById('og-desc').setAttribute("content", "Art inspired by nature, the silence of the mountain, and the child within us.");
+                document.getElementById('og-locale').setAttribute("content", "en_US");
+            } else {
+                document.getElementById('page-title').textContent = "Galerija ArtS | Nataša Stević – Umjetnost s Romanije";
+                document.getElementById('meta-desc').setAttribute("content", "Službeni portfolio akademske slikarice Nataše Stević. Unikatne umjetničke slike iz šumskog ateljea na Romaniji. Isporuka diljem BiH i regije.");
+                document.getElementById('og-title').setAttribute("content", "Galerija ArtS | Nataša Stević");
+                document.getElementById('og-desc').setAttribute("content", "Umjetnost inspirirana prirodom, tišinom planine i djetetom u nama.");
+                document.getElementById('og-locale').setAttribute("content", "bs_BA");
+            }
+            
+            // Vizualna promjena na gumbima navigacije
+            const btnBs = document.getElementById('btn-bs');
+            const btnEn = document.getElementById('btn-en');
+            
+            if (lang === 'en') {
+                btnEn.classList.add('text-[#D4AF37]');
+                btnEn.classList.remove('text-stone-400');
+                btnBs.classList.add('text-stone-400');
+                btnBs.classList.remove('text-[#D4AF37]');
+            } else {
+                btnBs.classList.add('text-[#D4AF37]');
+                btnBs.classList.remove('text-stone-400');
+                btnEn.classList.add('text-stone-400');
+                btnEn.classList.remove('text-[#D4AF37]');
+            }
+
+            // Ažuriraj galerijski Lightbox tekst ako je slučajno otvoren
+            if (document.getElementById('lightbox').classList.contains('active')) {
+                showLightboxAt(currentLightboxIndex);
+            }
+        }
+
         // SCROLL PROGRESS BAR
         const scrollProgress = document.getElementById('scroll-progress');
         window.addEventListener('scroll', () => {
@@ -1122,9 +1164,9 @@
             const img = slideEl.querySelector('img');
             if (!img) return;
             buildSlideRegistry();
-            // Find index
             const src = img.src;
-            const idx = allSlides.findIndex(s => s.src === src && s.caption === caption);
+            // Updatano da ne lomi ako caption nije 100% isti (npr. zbog jezika)
+            const idx = allSlides.findIndex(s => s.src === src);
             currentLightboxIndex = idx >= 0 ? idx : 0;
             showLightboxAt(currentLightboxIndex);
             document.getElementById('lightbox').classList.add('active');
@@ -1132,6 +1174,7 @@
         }
 
         function showLightboxAt(idx) {
+            buildSlideRegistry(); // Refresha registry da uzme trenutni jezik
             if (allSlides.length === 0) return;
             const item = allSlides[idx];
             document.getElementById('lightbox-img').src = item.src;
